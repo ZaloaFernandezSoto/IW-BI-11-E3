@@ -1,0 +1,9 @@
+{% extends 'appRecipesStore/base.html' %}
+{% block content %}
+<h2>Todas las recetas</h2>
+<ul>
+{% for receta in recetas %}
+    <li><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a> ({{ receta.tipo_plato }})</li>
+{% endfor %}
+</ul>
+{% endblock %}

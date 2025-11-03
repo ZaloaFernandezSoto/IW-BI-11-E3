@@ -1,0 +1,13 @@
+{% extends 'appRecipesStore/base.html' %}
+
+{% block content %}
+<h2>Tipos de Plato</h2>
+<ul>
+{% for tipo in tipos %}
+    <li><a href="{% url 'detalle_tipo_plato' tipo.pk %}">{{ tipo.nombre }}</a></li>
+{% empty %}
+    <li>No hay tipos de plato registrados.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'home' %}">← Volver al inicio</a>
+{% endblock %}

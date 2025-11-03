@@ -1,0 +1,14 @@
+{% extends 'appRecipesStore/base.html' %}
+
+{% block content %}
+<h2>{{ ingrediente.nombre }}</h2>
+<h3>Recetas que lo usan:</h3>
+<ul>
+{% for receta in ingrediente.recetas.all %}
+    <li><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a></li>
+{% empty %}
+    <li>Este ingrediente aún no se usa en ninguna receta.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'lista_ingredientes' %}">← Volver a ingredientes</a>
+{% endblock %}

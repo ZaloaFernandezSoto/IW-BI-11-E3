@@ -1,0 +1,15 @@
+{% extends 'appRecipesStore/base.html' %}
+{% block content %}
+<h2>{{ receta.nombre }}</h2>
+<p><strong>Tipo de plato:</strong> {{ receta.tipo_plato }}</p>
+<p><strong>Tiempo de preparación:</strong> {{ receta.tiempo_preparacion }} min</p>
+<p><strong>Ingredientes:</strong>
+    <ul>
+    {% for ing in receta.ingredientes.all %}
+        <li>{{ ing.nombre }}</li>
+    {% endfor %}
+    </ul>
+</p>
+<p><strong>Instrucciones:</strong> {{ receta.instrucciones }}</p>
+<a href="{% url 'lista_recetas' %}">← Volver a recetas</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'appRecipesStore/base.html' %}
+
+{% block content %}
+<h1>Recipes Store</h1>
+<h2>Recetas destacadas</h2>
+<ul>
+{% for receta in recetas %}
+    <li><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a> ({{ receta.tipo_plato }})</li>
+{% empty %}
+    <li>No hay recetas aún.</li>
+{% endfor %}
+</ul>
+{% endblock %}

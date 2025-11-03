@@ -1,0 +1,14 @@
+{% extends 'appRecipesStore/base.html' %}
+
+{% block content %}
+<h2>{{ tipo.nombre }}</h2>
+<h3>Recetas asociadas:</h3>
+<ul>
+{% for receta in tipo.recetas.all %}
+    <li><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a></li>
+{% empty %}
+    <li>No hay recetas para este tipo de plato.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'lista_tipos_plato' %}">← Volver a tipos de plato</a>
+{% endblock %}

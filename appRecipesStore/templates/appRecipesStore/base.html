@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipes Store</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        nav a { margin-right: 15px; text-decoration: none; color: #007BFF; }
+        nav a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Inicio</a>
+        <a href="{% url 'lista_recetas' %}">Recetas</a>
+        <a href="{% url 'lista_tipos_plato' %}">Tipos de Plato</a>
+        <a href="{% url 'lista_ingredientes' %}">Ingredientes</a>
+    </nav>
+    <hr>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
