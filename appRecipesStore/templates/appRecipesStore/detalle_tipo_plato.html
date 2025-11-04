@@ -1,132 +1,14 @@
 {% extends 'appRecipesStore/base.html' %}
-{% load static %}
-
-{% block title %}{{ tipo.nombre }} - Recipes Store{% endblock %}
-{% block body_class %}left-sidebar{% endblock %}
 
 {% block content %}
-<!-- Main -->
-<section id="main">
-    <div class="container">
-        <div class="row">
-
-            <!-- Sidebar -->
-            <div id="sidebar" class="col-4 col-12-medium">
-
-                <!-- Excerpts -->
-                <section>
-                    <ul class="divided">
-                        {% for receta in tipo.recetas.all|slice:":3" %}
-                        <li>
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <header>
-                                    <span class="date">{{ receta.tiempo_preparacion }} min</span>
-                                    <h3><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a></h3>
-                                </header>
-                                <p>Una deliciosa receta de {{ tipo.nombre }} que no te puedes perder. Tiempo de preparación: {{ receta.tiempo_preparacion }} minutos.</p>
-                            </article>
-                        </li>
-                        {% empty %}
-                        <li>
-                            <article class="box excerpt">
-                                <header>
-                                    <h3>Sin recetas</h3>
-                                </header>
-                                <p>Aún no hay recetas disponibles para esta categoría.</p>
-                            </article>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </section>
-
-                <!-- Highlights -->
-                <section>
-                    <ul class="divided">
-                        <li>
-                            <!-- Highlight -->
-                            <article class="box highlight">
-                                <header>
-                                    <h3><a href="{% url 'lista_tipos_plato' %}">Otros Tipos de Plato</a></h3>
-                                </header>
-                                <a href="{% url 'lista_tipos_plato' %}" class="image left"><img src="{% static 'appRecipesStore/images/pic06.jpg' %}" alt="" /></a>
-                                <p>Explora otras categorías de platos y descubre más recetas deliciosas en nuestra colección completa.</p>
-                                <ul class="actions">
-                                    <li><a href="{% url 'lista_tipos_plato' %}" class="button icon solid fa-file">Ver Categorías</a></li>
-                                </ul>
-                            </article>
-                        </li>
-                        <li>
-                            <!-- Highlight -->
-                            <article class="box highlight">
-                                <header>
-                                    <h3><a href="{% url 'lista_ingredientes' %}">Ingredientes</a></h3>
-                                </header>
-                                <a href="{% url 'lista_ingredientes' %}" class="image left"><img src="{% static 'appRecipesStore/images/pic07.jpg' %}" alt="" /></a>
-                                <p>Consulta nuestra lista completa de ingredientes y descubre qué recetas puedes preparar con lo que tienes.</p>
-                                <ul class="actions">
-                                    <li><a href="{% url 'lista_ingredientes' %}" class="button icon solid fa-file">Ver Ingredientes</a></li>
-                                </ul>
-                            </article>
-                        </li>
-                    </ul>
-                </section>
-
-            </div>
-
-            <!-- Content -->
-            <div id="content" class="col-8 col-12-medium imp-medium">
-
-                <!-- Post -->
-                <article class="box post">
-                    <header>
-                        <h2>Recetas de <strong>{{ tipo.nombre }}</strong></h2>
-                    </header>
-                    <span class="image featured"><img src="{% static 'appRecipesStore/images/pic04.jpg' %}" alt="" /></span>
-                    
-                    <h3>Explora todas las recetas de {{ tipo.nombre }}</h3>
-                    <p>Aquí encontrarás todas las recetas clasificadas como {{ tipo.nombre }}. 
-                    Cada receta incluye ingredientes detallados, tiempo de preparación e instrucciones paso a paso.</p>
-                    
-                    {% if tipo.recetas.all %}
-                        {% for receta in tipo.recetas.all %}
-                        <article class="box excerpt">
-                            <header>
-                                <span class="date">{{ receta.tiempo_preparacion }} min</span>
-                                <h3><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a></h3>
-                            </header>
-                            <p><strong>Tiempo de preparación:</strong> {{ receta.tiempo_preparacion }} minutos</p>
-                            <p><strong>Ingredientes principales:</strong> 
-                                {% for ing in receta.ingredientes.all|slice:":5" %}
-                                    {{ ing.nombre }}{% if not forloop.last %}, {% endif %}
-                                {% endfor %}
-                                {% if receta.ingredientes.count > 5 %}...{% endif %}
-                            </p>
-                            <ul class="actions">
-                                <li><a href="{% url 'detalle_receta' receta.pk %}" class="button icon solid fa-eye">Ver Receta Completa</a></li>
-                            </ul>
-                        </article>
-                        <hr />
-                        {% endfor %}
-                    {% else %}
-                        <p>No hay recetas registradas para este tipo de plato en este momento. 
-                        ¡Pronto añadiremos nuevas recetas de {{ tipo.nombre }}!</p>
-                    {% endif %}
-                    
-                    <h3>¿Buscas algo diferente?</h3>
-                    <p>Si no encuentras lo que buscas en esta categoría, te invitamos a explorar otros tipos de plato 
-                    o buscar recetas por ingredientes específicos.</p>
-                    
-                    <ul class="actions">
-                        <li><a href="{% url 'lista_tipos_plato' %}" class="button icon solid fa-arrow-left">Volver a Tipos de Plato</a></li>
-                        <li><a href="{% url 'lista_recetas' %}" class="button icon solid fa-list">Ver Todas las Recetas</a></li>
-                        <li><a href="{% url 'home' %}" class="button icon solid fa-home">Ir al Inicio</a></li>
-                    </ul>
-                </article>
-
-            </div>
-
-        </div>
-    </div>
-</section>
+<h2>{{ tipo.nombre }}</h2>
+<h3>Recetas asociadas:</h3>
+<ul>
+{% for receta in tipo.recetas.all %}
+    <li><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a></li>
+{% empty %}
+    <li>No hay recetas para este tipo de plato.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'lista_tipos_plato' %}">← Volver a tipos de plato</a>
 {% endblock %}

@@ -1,55 +1,15 @@
 {% extends 'appRecipesStore/base.html' %}
-{% load static %}
-
-{% block title %}{{ receta.nombre }} - Recipes Store{% endblock %}
-{% block body_class %}no-sidebar{% endblock %}
-
 {% block content %}
-<!-- Main -->
-<section id="main">
-    <div class="container">
-        <div id="content">
-
-            <!-- Post -->
-            <article class="box post">
-                <header>
-                    <h2>{{ receta.nombre }}</h2>
-                </header>
-                <span class="image featured"><img src="{% static 'appRecipesStore/images/pic04.jpg' %}" alt="{{ receta.nombre }}" /></span>
-                
-                <h3>Información General</h3>
-                <p><strong>Tipo de plato:</strong> {{ receta.tipo_plato }}</p>
-                <p><strong>Tiempo de preparación:</strong> {{ receta.tiempo_preparacion }} minutos</p>
-                
-                <h3>Ingredientes Necesarios</h3>
-                <p>Para preparar esta deliciosa receta necesitarás los siguientes ingredientes:</p>
-                <ul>
-                {% for ing in receta.ingredientes.all %}
-                    <li><a href="{% url 'detalle_ingrediente' ing.pk %}">{{ ing.nombre }}</a></li>
-                {% empty %}
-                    <li>No hay ingredientes registrados para esta receta.</li>
-                {% endfor %}
-                </ul>
-                
-                <h3>Instrucciones de Preparación</h3>
-                <p>{{ receta.instrucciones }}</p>
-                
-                <h3>Consejos y Recomendaciones</h3>
-                <p>Esta receta de {{ receta.nombre }} es perfecta para disfrutar en cualquier ocasión. 
-                El tiempo estimado de preparación es de {{ receta.tiempo_preparacion }} minutos, 
-                lo que la hace ideal tanto para el día a día como para ocasiones especiales.</p>
-                
-                <p>Puedes ajustar las cantidades de los ingredientes según el número de comensales. 
-                No olvides revisar que tienes todos los ingredientes antes de comenzar la preparación.</p>
-                
-                <ul class="actions">
-                    <li><a href="{% url 'lista_recetas' %}" class="button icon solid fa-arrow-left">Volver a Recetas</a></li>
-                    <li><a href="{% url 'detalle_tipo_plato' receta.tipo_plato.pk %}" class="button icon solid fa-list">Ver más de {{ receta.tipo_plato }}</a></li>
-                    <li><a href="{% url 'home' %}" class="button icon solid fa-home">Ir al Inicio</a></li>
-                </ul>
-            </article>
-
-        </div>
-    </div>
-</section>
+<h2>{{ receta.nombre }}</h2>
+<p><strong>Tipo de plato:</strong> {{ receta.tipo_plato }}</p>
+<p><strong>Tiempo de preparación:</strong> {{ receta.tiempo_preparacion }} min</p>
+<p><strong>Ingredientes:</strong>
+    <ul>
+    {% for ing in receta.ingredientes.all %}
+        <li>{{ ing.nombre }}</li>
+    {% endfor %}
+    </ul>
+</p>
+<p><strong>Instrucciones:</strong> {{ receta.instrucciones }}</p>
+<a href="{% url 'lista_recetas' %}">← Volver a recetas</a>
 {% endblock %}

@@ -1,114 +1,13 @@
 {% extends 'appRecipesStore/base.html' %}
-{% load static %}
-
-{% block title %}Tipos de Plato - Recipes Store{% endblock %}
-{% block body_class %}left-sidebar{% endblock %}
 
 {% block content %}
-<!-- Main -->
-<section id="main">
-    <div class="container">
-        <div class="row">
-
-            <!-- Sidebar -->
-            <div id="sidebar" class="col-4 col-12-medium">
-
-                <!-- Excerpts -->
-                <section>
-                    <ul class="divided">
-                        <li>
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <header>
-                                    <h3><a href="{% url 'home' %}">Inicio</a></h3>
-                                </header>
-                                <p>Vuelve a la página principal para explorar todas las secciones de Recipes Store.</p>
-                            </article>
-                        </li>
-                        <li>
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <header>
-                                    <h3><a href="{% url 'lista_recetas' %}">Todas las Recetas</a></h3>
-                                </header>
-                                <p>Explora nuestra colección completa de recetas organizadas por categorías.</p>
-                            </article>
-                        </li>
-                        <li>
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <header>
-                                    <h3><a href="{% url 'lista_ingredientes' %}">Ingredientes</a></h3>
-                                </header>
-                                <p>Descubre todos los ingredientes disponibles en nuestra base de datos.</p>
-                            </article>
-                        </li>
-                    </ul>
-                </section>
-
-                <!-- Highlights -->
-                <section>
-                    <ul class="divided">
-                        <li>
-                            <!-- Highlight -->
-                            <article class="box highlight">
-                                <header>
-                                    <h3><a href="#">Organiza tus Recetas</a></h3>
-                                </header>
-                                <a href="#" class="image left"><img src="{% static 'appRecipesStore/images/pic06.jpg' %}" alt="" /></a>
-                                <p>Los tipos de plato te ayudan a clasificar y encontrar recetas según el momento de la comida o el tipo de preparación que buscas.</p>
-                                <ul class="actions">
-                                    <li><a href="{% url 'lista_recetas' %}" class="button icon solid fa-file">Ver Recetas</a></li>
-                                </ul>
-                            </article>
-                        </li>
-                    </ul>
-                </section>
-
-            </div>
-
-            <!-- Content -->
-            <div id="content" class="col-8 col-12-medium imp-medium">
-
-                <!-- Post -->
-                <article class="box post">
-                    <header>
-                        <h2>Explora por <strong>Tipo de Plato</strong></h2>
-                    </header>
-                    <span class="image featured"><img src="{% static 'appRecipesStore/images/pic04.jpg' %}" alt="" /></span>
-                    
-                    <h3>Categorías de Platos</h3>
-                    <p>Los tipos de plato te permiten navegar y descubrir recetas organizadas según su categoría culinaria. 
-                    Ya sea que busques un entrante, un plato principal o un postre, aquí encontrarás todas las opciones disponibles.</p>
-                    
-                    {% if tipos %}
-                        {% for tipo in tipos %}
-                        <article class="box excerpt">
-                            <header>
-                                <h3><a href="{% url 'detalle_tipo_plato' tipo.pk %}">{{ tipo.nombre }}</a></h3>
-                            </header>
-                            <p>Descubre todas las recetas de tipo {{ tipo.nombre }}. Haz clic para ver el listado completo de recetas en esta categoría.</p>
-                            <ul class="actions">
-                                <li><a href="{% url 'detalle_tipo_plato' tipo.pk %}" class="button icon solid fa-eye">Ver Recetas de {{ tipo.nombre }}</a></li>
-                            </ul>
-                        </article>
-                        {% endfor %}
-                    {% else %}
-                        <p>No hay tipos de plato registrados en este momento. ¡Pronto añadiremos más categorías!</p>
-                    {% endif %}
-                    
-                    <h3>¿Por qué usar tipos de plato?</h3>
-                    <p>Organizar las recetas por tipo te permite encontrar exactamente lo que necesitas para cada momento del día. 
-                    Desde desayunos energéticos hasta cenas elaboradas, cada categoría agrupa recetas similares para facilitar tu búsqueda.</p>
-                    
-                    <ul class="actions">
-                        <li><a href="{% url 'home' %}" class="button icon solid fa-home">Volver al Inicio</a></li>
-                    </ul>
-                </article>
-
-            </div>
-
-        </div>
-    </div>
-</section>
+<h2>Tipos de Plato</h2>
+<ul>
+{% for tipo in tipos %}
+    <li><a href="{% url 'detalle_tipo_plato' tipo.pk %}">{{ tipo.nombre }}</a></li>
+{% empty %}
+    <li>No hay tipos de plato registrados.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'home' %}">← Volver al inicio</a>
 {% endblock %}

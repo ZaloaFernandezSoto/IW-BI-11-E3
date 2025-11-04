@@ -1,101 +1,22 @@
-{% load static %}
-<!DOCTYPE HTML>
-<html lang="es">
+<!DOCTYPE html>
+<html>
 <head>
-    <title>{% block title %}Recipes Store{% endblock %}</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="{% static 'appRecipesStore/css/main.css' %}" />
+    <title>Recipes Store</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        nav a { margin-right: 15px; text-decoration: none; color: #007BFF; }
+        nav a:hover { text-decoration: underline; }
+    </style>
 </head>
-<body class="{% block body_class %}homepage{% endblock %} is-preload">
-    <div id="page-wrapper">
-
-        <!-- Header -->
-        <section id="header">
-            <div class="container">
-
-                <!-- Logo -->
-                <h1 id="logo"><a href="{% url 'home' %}">Recipes Store</a></h1>
-                <p>Tu colección de recetas deliciosas</p>
-
-                <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li><a class="icon solid fa-home" href="{% url 'home' %}"><span>Inicio</span></a></li>
-                        <li><a class="icon solid fa-utensils" href="{% url 'lista_recetas' %}"><span>Recetas</span></a></li>
-                        <li><a class="icon solid fa-list" href="{% url 'lista_tipos_plato' %}"><span>Tipos de Plato</span></a></li>
-                        <li><a class="icon solid fa-carrot" href="{% url 'lista_ingredientes' %}"><span>Ingredientes</span></a></li>
-                    </ul>
-                </nav>
-
-            </div>
-        </section>
-
-        <!-- Main Content -->
-        {% block content %}
-        {% endblock %}
-
-        <!-- Footer -->
-        <section id="footer">
-            <div class="container">
-                <header>
-                    <h2>¿Tienes alguna pregunta? <strong>Contáctanos:</strong></h2>
-                </header>
-                <div class="row">
-                    <div class="col-6 col-12-medium">
-                        <section>
-                            <p>Recipes Store es tu espacio para descubrir y compartir las mejores recetas. 
-                            Explora nuestra colección de platos deliciosos y encuentra ingredientes para tus creaciones culinarias.</p>
-                        </section>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <section>
-                            <div class="row">
-                                <div class="col-6 col-12-small">
-                                    <ul class="icons">
-                                        <li class="icon solid fa-home">
-                                            Universidad de Deusto<br />
-                                            Bilbao, España
-                                        </li>
-                                        <li class="icon solid fa-envelope">
-                                            <a href="#">info@recipesstore.com</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-6 col-12-small">
-                                    <ul class="icons">
-                                        <li class="icon brands fa-twitter">
-                                            <a href="#">@recipesstore</a>
-                                        </li>
-                                        <li class="icon brands fa-instagram">
-                                            <a href="#">instagram.com/recipesstore</a>
-                                        </li>
-                                        <li class="icon brands fa-facebook-f">
-                                            <a href="#">facebook.com/recipesstore</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-            <div id="copyright" class="container">
-                <ul class="links">
-                    <li>&copy; 2025 Recipes Store — Proyecto de Ingeniería Web</li>
-                    <li>Universidad de Deusto</li>
-                </ul>
-            </div>
-        </section>
-
-    </div>
-
-    <!-- Scripts -->
-    <script src="{% static 'appRecipesStore/js/jquery.min.js' %}"></script>
-    <script src="{% static 'appRecipesStore/js/jquery.dropotron.min.js' %}"></script>
-    <script src="{% static 'appRecipesStore/js/browser.min.js' %}"></script>
-    <script src="{% static 'appRecipesStore/js/breakpoints.min.js' %}"></script>
-    <script src="{% static 'appRecipesStore/js/util.js' %}"></script>
-    <script src="{% static 'appRecipesStore/js/main.js' %}"></script>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Inicio</a>
+        <a href="{% url 'lista_recetas' %}">Recetas</a>
+        <a href="{% url 'lista_tipos_plato' %}">Tipos de Plato</a>
+        <a href="{% url 'lista_ingredientes' %}">Ingredientes</a>
+    </nav>
+    <hr>
+    {% block content %}
+    {% endblock %}
 </body>
 </html>
