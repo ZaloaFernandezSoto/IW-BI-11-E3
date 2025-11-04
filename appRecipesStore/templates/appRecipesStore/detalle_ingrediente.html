@@ -1,14 +1,68 @@
 {% extends 'appRecipesStore/base.html' %}
+{% load static %}
+
+{% block title %}{{ ingrediente.nombre }} - Recipes Store{% endblock %}
+{% block body_class %}no-sidebar{% endblock %}
 
 {% block content %}
-<h2>{{ ingrediente.nombre }}</h2>
-<h3>Recetas que lo usan:</h3>
-<ul>
-{% for receta in ingrediente.recetas.all %}
-    <li><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a></li>
-{% empty %}
-    <li>Este ingrediente aún no se usa en ninguna receta.</li>
-{% endfor %}
-</ul>
-<a href="{% url 'lista_ingredientes' %}">← Volver a ingredientes</a>
+<!-- Main -->
+<section id="main">
+    <div class="container">
+        <div id="content">
+
+            <!-- Post -->
+            <article class="box post">
+                <header>
+                    <h2>{{ ingrediente.nombre }}</h2>
+                </header>
+                <span class="image featured"><img src="{% static 'appRecipesStore/images/pic04.jpg' %}" alt="{{ ingrediente.nombre }}" /></span>
+                
+                <h3>Recetas que Utilizan este Ingrediente</h3>
+                <p>Descubre todas las deliciosas recetas en las que puedes usar {{ ingrediente.nombre }}. 
+                Cada receta incluye instrucciones detalladas y lista completa de ingredientes.</p>
+                
+                {% if ingrediente.recetas.all %}
+                    {% for receta in ingrediente.recetas.all %}
+                    <article class="box excerpt">
+                        <header>
+                            <span class="date">{{ receta.tiempo_preparacion }} min</span>
+                            <h3><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a></h3>
+                        </header>
+                        <p><strong>Tipo de plato:</strong> {{ receta.tipo_plato }}</p>
+                        <p><strong>Tiempo de preparación:</strong> {{ receta.tiempo_preparacion }} minutos</p>
+                        <p><strong>Otros ingredientes:</strong> 
+                            {% for ing in receta.ingredientes.all|slice:":5" %}
+                                {% if ing != ingrediente %}
+                                    {{ ing.nombre }}{% if not forloop.last %}, {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </p>
+                        <ul class="actions">
+                            <li><a href="{% url 'detalle_receta' receta.pk %}" class="button icon solid fa-eye">Ver Receta</a></li>
+                        </ul>
+                    </article>
+                    <hr />
+                    {% endfor %}
+                {% else %}
+                    <p>Este ingrediente aún no se utiliza en ninguna receta registrada. 
+                    ¡Pronto añadiremos nuevas recetas que incluyan {{ ingrediente.nombre }}!</p>
+                {% endif %}
+                
+                <h3>Información Adicional</h3>
+                <p>{{ ingrediente.nombre }} es un ingrediente versátil que puede utilizarse en diferentes tipos de preparaciones. 
+                Explora las recetas anteriores para descubrir nuevas formas de incorporarlo en tu cocina.</p>
+                
+                <p>Si no encuentras la receta que buscas, te invitamos a explorar nuestra colección completa 
+                o buscar por otros ingredientes que tengas disponibles.</p>
+                
+                <ul class="actions">
+                    <li><a href="{% url 'lista_ingredientes' %}" class="button icon solid fa-arrow-left">Volver a Ingredientes</a></li>
+                    <li><a href="{% url 'lista_recetas' %}" class="button icon solid fa-list">Ver Todas las Recetas</a></li>
+                    <li><a href="{% url 'home' %}" class="button icon solid fa-home">Ir al Inicio</a></li>
+                </ul>
+            </article>
+
+        </div>
+    </div>
+</section>
 {% endblock %}

@@ -1,9 +1,133 @@
 {% extends 'appRecipesStore/base.html' %}
+{% load static %}
+
+{% block title %}Recetas - Recipes Store{% endblock %}
+{% block body_class %}right-sidebar{% endblock %}
+
 {% block content %}
-<h2>Todas las recetas</h2>
-<ul>
-{% for receta in recetas %}
-    <li><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a> ({{ receta.tipo_plato }})</li>
-{% endfor %}
-</ul>
+<!-- Main -->
+<section id="main">
+    <div class="container">
+        <div class="row">
+
+            <!-- Content -->
+            <div id="content" class="col-8 col-12-medium">
+
+                <!-- Post -->
+                <article class="box post">
+                    <header>
+                        <h2>Todas las <strong>Recetas</strong></h2>
+                    </header>
+                    <span class="image featured"><img src="{% static 'appRecipesStore/images/pic04.jpg' %}" alt="" /></span>
+                    
+                    <h3>Explora Nuestra Colección Completa</h3>
+                    <p>Descubre todas las recetas disponibles en nuestra base de datos. Cada receta incluye información detallada sobre ingredientes, tiempo de preparación y pasos a seguir.</p>
+                    
+                    {% if recetas %}
+                        {% for receta in recetas %}
+                        <article class="box excerpt">
+                            <header>
+                                <span class="date">{{ receta.tiempo_preparacion }} min</span>
+                                <h3><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a></h3>
+                            </header>
+                            <p><strong>Tipo de plato:</strong> {{ receta.tipo_plato }}</p>
+                            <p><strong>Ingredientes principales:</strong> 
+                                {% for ing in receta.ingredientes.all|slice:":5" %}
+                                    {{ ing.nombre }}{% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                                {% if receta.ingredientes.count > 5 %}...{% endif %}
+                            </p>
+                            <ul class="actions">
+                                <li><a href="{% url 'detalle_receta' receta.pk %}" class="button icon solid fa-eye">Ver Receta Completa</a></li>
+                            </ul>
+                        </article>
+                        <hr />
+                        {% endfor %}
+                    {% else %}
+                        <p>No hay recetas disponibles en este momento. ¡Pronto añadiremos nuevas recetas deliciosas!</p>
+                    {% endif %}
+                    
+                    <h3>¿No encuentras lo que buscas?</h3>
+                    <p>Puedes explorar nuestras recetas por categorías de tipo de plato o buscar por ingredientes específicos. También puedes volver al inicio para ver las recetas destacadas.</p>
+                    
+                    <ul class="actions">
+                        <li><a href="{% url 'home' %}" class="button icon solid fa-home">Volver al Inicio</a></li>
+                    </ul>
+                </article>
+
+            </div>
+
+            <!-- Sidebar -->
+            <div id="sidebar" class="col-4 col-12-medium">
+
+                <!-- Excerpts -->
+                <section>
+                    <ul class="divided">
+                        <li>
+                            <!-- Excerpt -->
+                            <article class="box excerpt">
+                                <header>
+                                    <h3><a href="{% url 'lista_tipos_plato' %}">Tipos de Plato</a></h3>
+                                </header>
+                                <p>Explora recetas organizadas por categorías: entrantes, platos principales, postres y más.</p>
+                            </article>
+                        </li>
+                        <li>
+                            <!-- Excerpt -->
+                            <article class="box excerpt">
+                                <header>
+                                    <h3><a href="{% url 'lista_ingredientes' %}">Ingredientes</a></h3>
+                                </header>
+                                <p>Busca recetas según los ingredientes que tienes disponibles en casa.</p>
+                            </article>
+                        </li>
+                        <li>
+                            <!-- Excerpt -->
+                            <article class="box excerpt">
+                                <header>
+                                    <h3><a href="{% url 'home' %}">Inicio</a></h3>
+                                </header>
+                                <p>Vuelve a la página principal para ver recetas destacadas y más opciones.</p>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Highlights -->
+                <section>
+                    <ul class="divided">
+                        <li>
+                            <!-- Highlight -->
+                            <article class="box highlight">
+                                <header>
+                                    <h3><a href="#">Recetas Rápidas</a></h3>
+                                </header>
+                                <a href="#" class="image left"><img src="{% static 'appRecipesStore/images/pic06.jpg' %}" alt="" /></a>
+                                <p>¿Poco tiempo? Descubre recetas que puedes preparar en menos de 30 minutos sin sacrificar sabor.</p>
+                                <ul class="actions">
+                                    <li><a href="{% url 'lista_recetas' %}" class="button icon solid fa-file">Ver Recetas</a></li>
+                                </ul>
+                            </article>
+                        </li>
+                        <li>
+                            <!-- Highlight -->
+                            <article class="box highlight">
+                                <header>
+                                    <h3><a href="#">Consejos de Cocina</a></h3>
+                                </header>
+                                <a href="#" class="image left"><img src="{% static 'appRecipesStore/images/pic07.jpg' %}" alt="" /></a>
+                                <p>Aprende técnicas y trucos para mejorar tus habilidades culinarias y sorprender con cada plato.</p>
+                                <ul class="actions">
+                                    <li><a href="#" class="button icon solid fa-file">Más Información</a></li>
+                                </ul>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+</section>
 {% endblock %}
