@@ -1,9 +1,66 @@
 {% extends 'appRecipesStore/base.html' %}
+{% load static %}
+
+{% block title %}Recetas - Recipes Store{% endblock %}
+
 {% block content %}
-<h2>Todas las recetas</h2>
-<ul>
-{% for receta in recetas %}
-    <li><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a> ({{ receta.tipo_plato }})</li>
-{% endfor %}
-</ul>
+<main class="main">
+    <!-- Page Title -->
+    <div class="page-title light-background">
+        <div class="container">
+            <h1>Todas las Recetas</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                    <li class="current">Recetas</li>
+                </ol>
+            </nav>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu section">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Nuestra Colección de Recetas</h2>
+            <p>Explora todas nuestras deliciosas recetas organizadas para ti</p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-4">
+                {% for receta in recetas %}
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="{% static 'appRecipesStore/img/recepie/recepie_1.png' %}" class="img-fluid" alt="{{ receta.nombre }}">
+                            <div class="special-badge">{{ receta.tipo_plato.nombre }}</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h4><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a></h4>
+                                <div class="dietary-tags">
+                                    <span class="tag"><i class="bi bi-clock"></i></span>
+                                </div>
+                            </div>
+                            <p>{{ receta.instrucciones|truncatewords:20 }}</p>
+                            <div class="menu-item-footer">
+                                <span class="price">{{ receta.tiempo_preparacion }} min</span>
+                                <span class="ingredients-info">
+                                    <i class="bi bi-egg-fried"></i> {{ receta.ingredientes.count }} ingredientes
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col-12">
+                    <div class="alert alert-info text-center">
+                        <h4>No hay recetas disponibles</h4>
+                        <p>Pronto agregaremos nuevas recetas. ¡Vuelve pronto!</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section><!-- /Menu Section -->
+</main>
 {% endblock %}

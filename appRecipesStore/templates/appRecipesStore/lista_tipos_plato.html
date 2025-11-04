@@ -1,13 +1,68 @@
 {% extends 'appRecipesStore/base.html' %}
+{% load static %}
+
+{% block title %}Tipos de Plato - Recipes Store{% endblock %}
 
 {% block content %}
-<h2>Tipos de Plato</h2>
-<ul>
-{% for tipo in tipos %}
-    <li><a href="{% url 'detalle_tipo_plato' tipo.pk %}">{{ tipo.nombre }}</a></li>
-{% empty %}
-    <li>No hay tipos de plato registrados.</li>
-{% endfor %}
-</ul>
-<a href="{% url 'home' %}">← Volver al inicio</a>
+<main class="main">
+    <!-- Page Title -->
+    <div class="page-title light-background">
+        <div class="container">
+            <h1>Tipos de Plato</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                    <li class="current">Tipos de Plato</li>
+                </ol>
+            </nav>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Categories Section -->
+    <section class="chefs section">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Explora por Categorías</h2>
+            <p>Descubre recetas organizadas por tipo de plato</p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-grid">
+                <div class="row g-4">
+                    {% for tipo in tipos %}
+                    <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="100">
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="{% static 'appRecipesStore/img/recepie/recepie_1.png' %}" class="img-fluid" alt="{{ tipo.nombre }}">
+                                <div class="overlay">
+                                    <div class="social-icons">
+                                        <a href="{% url 'detalle_tipo_plato' tipo.pk %}"><i class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4><a href="{% url 'detalle_tipo_plato' tipo.pk %}">{{ tipo.nombre }}</a></h4>
+                                <span class="position">{{ tipo.recetas.count }} receta{{ tipo.recetas.count|pluralize:",s" }}</span>
+                                <p>Descubre deliciosas recetas de {{ tipo.nombre|lower }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <div class="col-12">
+                        <div class="alert alert-info text-center">
+                            <h4>No hay tipos de plato registrados</h4>
+                            <p>Pronto agregaremos categorías. ¡Vuelve pronto!</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <a href="{% url 'home' %}" class="btn btn-primary">← Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- /Categories Section -->
+</main>
 {% endblock %}

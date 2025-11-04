@@ -1,22 +1,162 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Recipes Store</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        nav a { margin-right: 15px; text-decoration: none; color: #007BFF; }
-        nav a:hover { text-decoration: underline; }
-    </style>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>{% block title %}Recipes Store{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'appRecipesStore/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'appRecipesStore/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'appRecipesStore/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'appRecipesStore/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    
+    <!-- Main CSS File -->
+    <link href="{% static 'appRecipesStore/css/main.css' %}" rel="stylesheet">
 </head>
-<body>
-    <nav>
-        <a href="{% url 'home' %}">Inicio</a>
-        <a href="{% url 'lista_recetas' %}">Recetas</a>
-        <a href="{% url 'lista_tipos_plato' %}">Tipos de Plato</a>
-        <a href="{% url 'lista_ingredientes' %}">Ingredientes</a>
-    </nav>
-    <hr>
+<body class="index-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+
+            <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
+                <h1 class="sitename">Recipes Store</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="{% url 'home' %}" class="active">Inicio</a></li>
+                    <li><a href="{% url 'lista_recetas' %}">Recetas</a></li>
+                    <li><a href="{% url 'lista_tipos_plato' %}">Tipos de Plato</a></li>
+                    <li><a href="{% url 'lista_ingredientes' %}">Ingredientes</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted d-none d-sm-block" href="{% url 'lista_recetas' %}">Ver Recetas</a>
+
+        </div>
+    </header>
+
     {% block content %}
     {% endblock %}
+
+    <!-- Footer -->
+    <footer id="footer" class="footer light-background">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4">
+                    <div class="footer-content">
+                        <a href="{% url 'home' %}" class="logo d-flex align-items-center mb-4">
+                            <span class="sitename">Recipes Store</span>
+                        </a>
+                        <p class="mb-4">Tu destino favorito para descubrir y compartir recetas deliciosas. Explora nuestra colección de recetas cuidadosamente seleccionadas.</p>
+
+                        <div class="newsletter-form">
+                            <h5>Mantente Actualizado</h5>
+                            <form action="#" method="post" class="php-email-form">
+                                <div class="input-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Ingresa tu email" required="">
+                                    <button type="submit" class="btn-subscribe">
+                                        <i class="bi bi-send"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <div class="footer-links">
+                        <h4>Enlaces</h4>
+                        <ul>
+                            <li><a href="{% url 'home' %}"><i class="bi bi-chevron-right"></i> Inicio</a></li>
+                            <li><a href="{% url 'lista_recetas' %}"><i class="bi bi-chevron-right"></i> Recetas</a></li>
+                            <li><a href="{% url 'lista_tipos_plato' %}"><i class="bi bi-chevron-right"></i> Categorías</a></li>
+                            <li><a href="{% url 'lista_ingredientes' %}"><i class="bi bi-chevron-right"></i> Ingredientes</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <div class="footer-links">
+                        <h4>Categorías</h4>
+                        <ul>
+                            <li><a href="{% url 'lista_tipos_plato' %}"><i class="bi bi-chevron-right"></i> Entrantes</a></li>
+                            <li><a href="{% url 'lista_tipos_plato' %}"><i class="bi bi-chevron-right"></i> Principales</a></li>
+                            <li><a href="{% url 'lista_tipos_plato' %}"><i class="bi bi-chevron-right"></i> Postres</a></li>
+                            <li><a href="{% url 'lista_tipos_plato' %}"><i class="bi bi-chevron-right"></i> Bebidas</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <h4>Contáctanos</h4>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div class="contact-info">
+                                <p>Calle Principal 123<br>Ciudad, País 12345</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="contact-info">
+                                <p>info@recipesstore.com</p>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="copyright">
+                            <p>© <span>Copyright</span> <strong class="px-1 sitename">Recipes Store</strong> <span>2025. Todos los derechos reservados</span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="footer-bottom-links">
+                            <a href="#">Política de Privacidad</a>
+                            <a href="#">Términos de Servicio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!-- /Footer -->
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'appRecipesStore/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'appRecipesStore/vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'appRecipesStore/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    
+    <!-- Main JS File -->
+    <script src="{% static 'appRecipesStore/js/main.js' %}"></script>
 </body>
 </html>

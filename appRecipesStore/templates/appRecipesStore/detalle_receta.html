@@ -1,15 +1,123 @@
 {% extends 'appRecipesStore/base.html' %}
+{% load static %}
+
+{% block title %}{{ receta.nombre }} - Recipes Store{% endblock %}
+
 {% block content %}
-<h2>{{ receta.nombre }}</h2>
-<p><strong>Tipo de plato:</strong> {{ receta.tipo_plato }}</p>
-<p><strong>Tiempo de preparación:</strong> {{ receta.tiempo_preparacion }} min</p>
-<p><strong>Ingredientes:</strong>
-    <ul>
-    {% for ing in receta.ingredientes.all %}
-        <li>{{ ing.nombre }}</li>
-    {% endfor %}
-    </ul>
-</p>
-<p><strong>Instrucciones:</strong> {{ receta.instrucciones }}</p>
-<a href="{% url 'lista_recetas' %}">← Volver a recetas</a>
+<main class="main">
+    <!-- Page Title -->
+    <div class="page-title light-background">
+        <div class="container">
+            <h1>{{ receta.nombre }}</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                    <li><a href="{% url 'lista_recetas' %}">Recetas</a></li>
+                    <li class="current">{{ receta.nombre }}</li>
+                </ol>
+            </nav>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Recipe Detail Section -->
+    <section class="about section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                    <div class="about-image">
+                        <img src="{% static 'appRecipesStore/img/recepie/recepie_1.png' %}" alt="{{ receta.nombre }}" class="img-fluid rounded">
+                        <div class="experience-badge">
+                            <span class="years">{{ receta.tiempo_preparacion }}</span>
+                            <span class="text">minutos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                    <div class="about-content">
+                        <div class="section-header">
+                            <h2>{{ receta.nombre }}</h2>
+                            <p class="subtitle">{{ receta.tipo_plato.nombre }}</p>
+                        </div>
+
+                        <div class="chef-highlights">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="highlight-item">
+                                        <i class="bi bi-clock"></i>
+                                        <span>{{ receta.tiempo_preparacion }} minutos</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="highlight-item">
+                                        <i class="bi bi-egg-fried"></i>
+                                        <span>{{ receta.ingredientes.count }} ingredientes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Ingredientes:</h4>
+                        <ul class="ingredients_list">
+                            {% for ing in receta.ingredientes.all %}
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <a href="{% url 'detalle_ingrediente' ing.pk %}">{{ ing.nombre }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+
+                        <div class="cta-buttons mt-4">
+                            <a href="{% url 'lista_recetas' %}" class="btn btn-outline">← Volver a Recetas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instructions Section -->
+            <div class="row mt-5">
+                <div class="col-12" data-aos="fade-up" data-aos-delay="400">
+                    <div class="instructions_area p-4 bg-light rounded">
+                        <h3>Instrucciones de Preparación</h3>
+                        <div class="instructions_content">
+                            <p>{{ receta.instrucciones|linebreaks }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- /Recipe Detail Section -->
+
+    <!-- Related Recipes -->
+    <section class="menu section light-background">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Más Recetas de {{ receta.tipo_plato.nombre }}</h2>
+            <p>Explora otras recetas que podrían interesarte</p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-4">
+                {% for otra_receta in receta.tipo_plato.recetas.all|slice:":3" %}
+                {% if otra_receta.pk != receta.pk %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="{% static 'appRecipesStore/img/recepie/recepie_1.png' %}" class="img-fluid" alt="{{ otra_receta.nombre }}">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h4><a href="{% url 'detalle_receta' otra_receta.pk %}">{{ otra_receta.nombre }}</a></h4>
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">{{ otra_receta.tiempo_preparacion }} min</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section><!-- /Related Recipes -->
+</main>
 {% endblock %}
