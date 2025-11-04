@@ -24,6 +24,7 @@ class Receta(models.Model):
     ingredientes = models.ManyToManyField(Ingrediente, related_name='recetas')
     tiempo_preparacion = models.IntegerField(help_text="Tiempo en minutos")
     instrucciones = models.TextField()
+    imagen = models.CharField(max_length=500, blank=True, null=True, help_text="Ruta de la imagen en static/appRecipesStore/img/")
 
     def __str__(self):
         return self.nombre
