@@ -1,13 +1,70 @@
 {% extends 'appRecipesStore/base.html' %}
+{% load static %}
+
+{% block title %}Ingredientes - Recipes Store{% endblock %}
 
 {% block content %}
-<h2>Ingredientes</h2>
-<ul>
-{% for ingrediente in ingredientes %}
-    <li><a href="{% url 'detalle_ingrediente' ingrediente.pk %}">{{ ingrediente.nombre }}</a></li>
-{% empty %}
-    <li>No hay ingredientes registrados.</li>
-{% endfor %}
-</ul>
-<a href="{% url 'home' %}">← Volver al inicio</a>
+<main class="main">
+    <!-- Page Title -->
+    <div class="page-title light-background">
+        <div class="container">
+            <h1>Ingredientes</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                    <li class="current">Ingredientes</li>
+                </ol>
+            </nav>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Ingredients Section -->
+    <section class="chefs section">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Todos los Ingredientes</h2>
+            <p>Encuentra recetas por ingrediente disponible</p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-grid">
+                <div class="row g-4">
+                    {% for ingrediente in ingredientes %}
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="100">
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <div class="ingredient-icon-wrapper" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px 20px; border-radius: 10px;">
+                                    <i class="bi bi-basket" style="font-size: 4rem; color: white;"></i>
+                                </div>
+                                <div class="overlay">
+                                    <div class="social-icons">
+                                        <a href="{% url 'detalle_ingrediente' ingrediente.pk %}"><i class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4><a href="{% url 'detalle_ingrediente' ingrediente.pk %}">{{ ingrediente.nombre }}</a></h4>
+                                <span class="position">{{ ingrediente.recetas.count }} receta{{ ingrediente.recetas.count|pluralize:",s" }}</span>
+                                <p>Descubre recetas con {{ ingrediente.nombre|lower }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <div class="col-12">
+                        <div class="alert alert-info text-center">
+                            <h4>No hay ingredientes registrados</h4>
+                            <p>Pronto agregaremos ingredientes. ¡Vuelve pronto!</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <a href="{% url 'home' %}" class="btn btn-primary">← Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- /Ingredients Section -->
+</main>
 {% endblock %}

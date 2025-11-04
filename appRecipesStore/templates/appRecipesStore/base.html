@@ -58,18 +58,6 @@
                             <span class="sitename">Recipes Store</span>
                         </a>
                         <p class="mb-4">Tu destino favorito para descubrir y compartir recetas deliciosas. Explora nuestra colección de recetas cuidadosamente seleccionadas.</p>
-
-                        <div class="newsletter-form">
-                            <h5>Mantente Actualizado</h5>
-                            <form action="#" method="post" class="php-email-form">
-                                <div class="input-group">
-                                    <input type="email" name="email" class="form-control" placeholder="Ingresa tu email" required="">
-                                    <button type="submit" class="btn-subscribe">
-                                        <i class="bi bi-send"></i>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
                     </div>
                 </div>
 
@@ -89,10 +77,9 @@
                     <div class="footer-links">
                         <h4>Categorías</h4>
                         <ul>
-                            <li><a href="{% url 'lista_tipos_plato' %}"><i class="bi bi-chevron-right"></i> Entrantes</a></li>
-                            <li><a href="{% url 'lista_tipos_plato' %}"><i class="bi bi-chevron-right"></i> Principales</a></li>
-                            <li><a href="{% url 'lista_tipos_plato' %}"><i class="bi bi-chevron-right"></i> Postres</a></li>
-                            <li><a href="{% url 'lista_tipos_plato' %}"><i class="bi bi-chevron-right"></i> Bebidas</a></li>
+                            {% load static %}
+                            {% comment %}Mostrar los tipos de plato reales de la base de datos{% endcomment %}
+                            <li><a href="{% url 'lista_tipos_plato' %}"><i class="bi bi-chevron-right"></i> Ver Todas</a></li>
                         </ul>
                     </div>
                 </div>
@@ -117,13 +104,6 @@
                                 <p>info@recipesstore.com</p>
                             </div>
                         </div>
-
-                        <div class="social-links">
-                            <a href="#"><i class="bi bi-facebook"></i></a>
-                            <a href="#"><i class="bi bi-twitter-x"></i></a>
-                            <a href="#"><i class="bi bi-instagram"></i></a>
-                            <a href="#"><i class="bi bi-pinterest"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -132,15 +112,9 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12 text-center">
                         <div class="copyright">
                             <p>© <span>Copyright</span> <strong class="px-1 sitename">Recipes Store</strong> <span>2025. Todos los derechos reservados</span></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="footer-bottom-links">
-                            <a href="#">Política de Privacidad</a>
-                            <a href="#">Términos de Servicio</a>
                         </div>
                     </div>
                 </div>

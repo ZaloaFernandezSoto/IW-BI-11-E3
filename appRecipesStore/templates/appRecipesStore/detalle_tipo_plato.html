@@ -1,14 +1,73 @@
 {% extends 'appRecipesStore/base.html' %}
+{% load static %}
+
+{% block title %}{{ tipo.nombre }} - Recipes Store{% endblock %}
 
 {% block content %}
-<h2>{{ tipo.nombre }}</h2>
-<h3>Recetas asociadas:</h3>
-<ul>
-{% for receta in tipo.recetas.all %}
-    <li><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a></li>
-{% empty %}
-    <li>No hay recetas para este tipo de plato.</li>
-{% endfor %}
-</ul>
-<a href="{% url 'lista_tipos_plato' %}">← Volver a tipos de plato</a>
+<main class="main">
+    <!-- Page Title -->
+    <div class="page-title light-background">
+        <div class="container">
+            <h1>{{ tipo.nombre }}</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                    <li><a href="{% url 'lista_tipos_plato' %}">Tipos de Plato</a></li>
+                    <li class="current">{{ tipo.nombre }}</li>
+                </ol>
+            </nav>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Recipes by Category -->
+    <section class="menu section">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Recetas de {{ tipo.nombre }}</h2>
+            <p>Explora todas nuestras recetas de esta categoría</p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-4">
+                {% for receta in tipo.recetas.all %}
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="{% static 'appRecipesStore/img/recepie/recepie_1.png' %}" class="img-fluid" alt="{{ receta.nombre }}">
+                            <div class="special-badge">{{ receta.tipo_plato.nombre }}</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h4><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a></h4>
+                                <div class="dietary-tags">
+                                    <span class="tag"><i class="bi bi-clock"></i></span>
+                                </div>
+                            </div>
+                            <p>{{ receta.instrucciones|truncatewords:20 }}</p>
+                            <div class="menu-item-footer">
+                                <span class="price">{{ receta.tiempo_preparacion }} min</span>
+                                <span class="ingredients-info">
+                                    <i class="bi bi-egg-fried"></i> {{ receta.ingredientes.count }} ingredientes
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col-12">
+                    <div class="alert alert-info text-center">
+                        <h4>No hay recetas para este tipo de plato</h4>
+                        <p>Pronto agregaremos recetas de {{ tipo.nombre }}. ¡Vuelve pronto!</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <a href="{% url 'lista_tipos_plato' %}" class="btn btn-primary">← Volver a Tipos de Plato</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- /Recipes by Category -->
+</main>
 {% endblock %}

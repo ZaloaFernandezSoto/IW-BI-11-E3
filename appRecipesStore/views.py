@@ -10,7 +10,7 @@ def home(request):
         receta = tipo.recetas.order_by('tiempo_preparacion').first()
         if receta:
             recetas_destacadas.append(receta)
-    return render(request, 'appRecipesStore/home.html', {'recetas': recetas_destacadas})
+    return render(request, 'appRecipesStore/index.html', {'recetas': recetas_destacadas})
 
 def lista_recetas(request):
     recetas = Receta.objects.all()
