@@ -9,6 +9,11 @@
     <div class="page-title light-background">
         <div class="container">
             <h1>{{ tipo.nombre }}</h1>
+            <div class="tipo-header-image mt-3">
+                {% if tipo.imagen %}
+                    <img src="{% static 'appRecipesStore/img/' %}{{ tipo.imagen }}" alt="{{ tipo.nombre }}" class="img-fluid rounded" style="max-height:220px; object-fit:cover;">
+                {% endif %}
+            </div>
             <nav class="breadcrumbs">
                 <ol>
                     <li><a href="{% url 'home' %}">Inicio</a></li>
