@@ -106,11 +106,13 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            {% if otra_receta.imagen %}
-                                <img src="{% static 'appRecipesStore/img/' %}{{ otra_receta.imagen }}" class="img-fluid" alt="{{ otra_receta.nombre }}">
-                            {% else %}
-                                <img src="{% static 'appRecipesStore/img/recepie/recepie_1.png' %}" class="img-fluid" alt="{{ otra_receta.nombre }}">
-                            {% endif %}
+                            <a href="{% url 'detalle_receta' otra_receta.pk %}" style="display: block;">
+                                {% if otra_receta.imagen %}
+                                    <img src="{% static 'appRecipesStore/img/' %}{{ otra_receta.imagen }}" class="img-fluid" alt="{{ otra_receta.nombre }}" style="cursor: pointer;">
+                                {% else %}
+                                    <img src="{% static 'appRecipesStore/img/recepie/recepie_1.png' %}" class="img-fluid" alt="{{ otra_receta.nombre }}" style="cursor: pointer;">
+                                {% endif %}
+                            </a>
                         </div>
                         <div class="menu-item-content">
                             <div class="menu-item-header">
