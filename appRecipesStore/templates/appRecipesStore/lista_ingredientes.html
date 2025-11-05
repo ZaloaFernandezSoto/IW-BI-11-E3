@@ -33,7 +33,7 @@
                         <div class="team-member">
                             <div class="member-photo">
                                 {% if ingrediente.imagen %}
-                                    <img src="{% static 'appRecipesStore/img/' %}{{ ingrediente.imagen }}" class="img-fluid" alt="{{ ingrediente.nombre }}" style="max-height:160px; object-fit:cover; border-radius:8px;">
+                                    <img src="{% static 'appRecipesStore/img/' %}{{ ingrediente.imagen }}" class="img-fluid" alt="{{ ingrediente.nombre }}" style="object-fit:cover; border-radius:8px;">
                                 {% else %}
                                     <div class="ingredient-icon-wrapper" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px 20px; border-radius: 10px;">
                                         <i class="bi bi-basket" style="font-size: 4rem; color: white;"></i>
