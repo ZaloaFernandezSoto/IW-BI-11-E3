@@ -7,6 +7,7 @@ from django.db import models
 class TipoPlato(models.Model):
     nombre = models.CharField(max_length=100, unique=True)
     descripcion = models.TextField(default="Sin descripcion")
+    imagen = models.CharField(max_length=500, blank=True, null=True, help_text="Ruta de la imagen en static/appRecipesStore/img/")
 
     def __str__(self):
         return self.nombre
@@ -14,6 +15,7 @@ class TipoPlato(models.Model):
 class Ingrediente(models.Model):
     nombre = models.CharField(max_length=100, unique=True)
     descripcion = models.TextField(default="Sin descripcion")
+    imagen = models.CharField(max_length=500, blank=True, null=True, help_text="Ruta de la imagen en static/appRecipesStore/img/")
 
     def __str__(self):
         return self.nombre
