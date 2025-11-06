@@ -31,25 +31,27 @@
                     {% for ingrediente in ingredientes %}
                     <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="100">
                         <div class="team-member">
-                            <div class="member-photo">
-                                {% if ingrediente.imagen %}
-                                    <img src="{% static 'appRecipesStore/img/' %}{{ ingrediente.imagen }}" class="img-fluid" alt="{{ ingrediente.nombre }}" style="object-fit:cover; border-radius:8px;">
-                                {% else %}
-                                    <div class="ingredient-icon-wrapper" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px 20px; border-radius: 10px;">
-                                        <i class="bi bi-basket" style="font-size: 4rem; color: white;"></i>
-                                    </div>
-                                {% endif %}
-                                <div class="overlay">
-                                    <div class="social-icons">
-                                        <a href="{% url 'detalle_ingrediente' ingrediente.pk %}"><i class="bi bi-arrow-right"></i></a>
+                            <a href="{% url 'detalle_ingrediente' ingrediente.pk %}" style="text-decoration: none; color: inherit;">
+                                <div class="member-photo" style="cursor: pointer;">
+                                    {% if ingrediente.imagen %}
+                                        <img src="{% static 'appRecipesStore/img/' %}{{ ingrediente.imagen }}" class="img-fluid" alt="{{ ingrediente.nombre }}" style="object-fit:cover; border-radius:8px;">
+                                    {% else %}
+                                        <div class="ingredient-icon-wrapper" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px 20px; border-radius: 10px;">
+                                            <i class="bi bi-basket" style="font-size: 4rem; color: white;"></i>
+                                        </div>
+                                    {% endif %}
+                                    <div class="overlay">
+                                        <div class="social-icons">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="member-info">
-                                <h4><a href="{% url 'detalle_ingrediente' ingrediente.pk %}">{{ ingrediente.nombre }}</a></h4>
-                                <span class="position">{{ ingrediente.recetas.count }} receta{{ ingrediente.recetas.count|pluralize:",s" }}</span>
-                                <p>Descubre recetas con {{ ingrediente.nombre|lower }}</p>
-                            </div>
+                                <div class="member-info">
+                                    <h4>{{ ingrediente.nombre }}</h4>
+                                    <span class="position">{{ ingrediente.recetas.count }} receta{{ ingrediente.recetas.count|pluralize:",s" }}</span>
+                                    <p>Descubre recetas con {{ ingrediente.nombre|lower }}</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     {% empty %}

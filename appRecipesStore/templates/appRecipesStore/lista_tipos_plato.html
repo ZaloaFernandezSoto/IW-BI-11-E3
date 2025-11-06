@@ -31,25 +31,25 @@
                     {% for tipo in tipos %}
                     <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="100">
                         <div class="team-member">
-                            <div class="member-photo">
-                                <a href="{% url 'detalle_tipo_plato' tipo.pk %}" style="display: block;">
+                            <a href="{% url 'detalle_tipo_plato' tipo.pk %}" style="text-decoration: none; color: inherit;">
+                                <div class="member-photo" style="cursor: pointer;">
                                     {% if tipo.imagen %}
-                                        <img src="{% static 'appRecipesStore/img/' %}{{ tipo.imagen }}" class="img-fluid" alt="{{ tipo.nombre }}" style="cursor: pointer;">
+                                        <img src="{% static 'appRecipesStore/img/' %}{{ tipo.imagen }}" class="img-fluid" alt="{{ tipo.nombre }}">
                                     {% else %}
-                                        <img src="{% static 'appRecipesStore/img/recepie/recepie_1.png' %}" class="img-fluid" alt="{{ tipo.nombre }}" style="cursor: pointer;">
+                                        <img src="{% static 'appRecipesStore/img/recepie/recepie_1.png' %}" class="img-fluid" alt="{{ tipo.nombre }}">
                                     {% endif %}
-                                </a>
-                                <div class="overlay">
-                                    <div class="social-icons">
-                                        <a href="{% url 'detalle_tipo_plato' tipo.pk %}"><i class="bi bi-arrow-right"></i></a>
+                                    <div class="overlay">
+                                        <div class="social-icons">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="member-info">
-                                <h4><a href="{% url 'detalle_tipo_plato' tipo.pk %}">{{ tipo.nombre }}</a></h4>
-                                <span class="position">{{ tipo.recetas.count }} receta{{ tipo.recetas.count|pluralize:",s" }}</span>
-                                <p>Descubre deliciosas recetas de {{ tipo.nombre|lower }}</p>
-                            </div>
+                                <div class="member-info">
+                                    <h4>{{ tipo.nombre }}</h4>
+                                    <span class="position">{{ tipo.recetas.count }} receta{{ tipo.recetas.count|pluralize:",s" }}</span>
+                                    <p>Descubre deliciosas recetas de {{ tipo.nombre|lower }}</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     {% empty %}
