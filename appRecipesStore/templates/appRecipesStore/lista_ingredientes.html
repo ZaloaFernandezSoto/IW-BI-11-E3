@@ -32,7 +32,6 @@
                     <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="100">
                         <div class="team-member">
                             <div class="member-photo">
-<<<<<<< HEAD
                                 {% if ingrediente.imagen %}
                                     <img src="{% static 'appRecipesStore/img/' %}{{ ingrediente.imagen }}" class="img-fluid" alt="{{ ingrediente.nombre }}" style="object-fit:cover; border-radius:8px;">
                                 {% else %}
@@ -40,17 +39,6 @@
                                         <i class="bi bi-basket" style="font-size: 4rem; color: white;"></i>
                                     </div>
                                 {% endif %}
-=======
-                                <a href="{% url 'detalle_ingrediente' ingrediente.pk %}" style="display: block;">
-                                    {% if ingrediente.imagen %}
-                                        <img src="{% static 'appRecipesStore/img/' %}{{ ingrediente.imagen }}" class="img-fluid" alt="{{ ingrediente.nombre }}" style="max-height:160px; object-fit:cover; border-radius:8px; cursor: pointer;">
-                                    {% else %}
-                                        <div class="ingredient-icon-wrapper" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px 20px; border-radius: 10px; cursor: pointer;">
-                                            <i class="bi bi-basket" style="font-size: 4rem; color: white;"></i>
-                                        </div>
-                                    {% endif %}
-                                </a>
->>>>>>> 5665ccca1f3769f1212f005621d7a8edcc456fd6
                                 <div class="overlay">
                                     <div class="social-icons">
                                         <a href="{% url 'detalle_ingrediente' ingrediente.pk %}"><i class="bi bi-arrow-right"></i></a>
