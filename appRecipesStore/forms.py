@@ -6,6 +6,10 @@ class RecetaForm(forms.ModelForm):
         model = Receta
         fields = ['nombre', 'tipo_plato', 'ingredientes', 'tiempo_preparacion', 'instrucciones', 'imagen']
 
+        labels = {
+            'tiempo_preparacion': 'Tiempo de preparación (min)',
+        }
+        
         widgets = {
             'nombre': forms.TextInput(attrs={'class': 'form-control'}),
             'tipo_plato': forms.Select(attrs={'class': 'form-select'}),
