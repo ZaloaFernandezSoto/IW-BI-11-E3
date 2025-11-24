@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Receta, TipoPlato, Ingrediente
+from .forms import RecetaForm
 
 # Create your views here.
 def home(request):
@@ -35,3 +36,14 @@ def lista_ingredientes(request):
 def detalle_ingrediente(request, pk):
     ingrediente = get_object_or_404(Ingrediente, pk=pk)
     return render(request, 'appRecipesStore/detalle_ingrediente.html', {'ingrediente': ingrediente})
+
+def crear_receta(request):
+    if request.method == "POST":
+        form = RecetaForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_recetas')
+    else:
+        form = RecetaForm()
+
+    return render(request, 'appRecipesStore/crear_receta.html', {'form': form})

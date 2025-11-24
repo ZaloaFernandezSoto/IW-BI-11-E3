@@ -26,9 +26,25 @@
                 <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
                     <div class="about-image">
                         {% if receta.imagen %}
-                            <img src="{% static 'appRecipesStore/img/' %}{{ receta.imagen }}" alt="{{ receta.nombre }}" class="img-fluid rounded">
+                            {% if receta.imagen.name|slice:":8" == "recetas/" %}
+                                <!-- Imagen nueva (MEDIA) -->
+                                <img src="{{ receta.imagen.url }}"
+                                    alt="{{ receta.nombre }}"
+                                    class="img-fluid rounded"
+                                    style="width: 100%; height: 350px; object-fit: cover;">
+                            {% else %}
+                                <!-- Imagen antigua (STATIC) -->
+                                <img src="{% static 'appRecipesStore/img/' %}{{ receta.imagen }}"
+                                    alt="{{ receta.nombre }}"
+                                    class="img-fluid rounded"
+                                    style="width: 100%; height: 350px; object-fit: cover;">
+                            {% endif %}
                         {% else %}
-                            <img src="{% static 'appRecipesStore/img/recepie/recepie_1.png' %}" alt="{{ receta.nombre }}" class="img-fluid rounded">
+                            <!-- Imagen por defecto -->
+                            <img src="{% static 'appRecipesStore/img/recepie/recepie_1.png' %}"
+                                alt="{{ receta.nombre }}"
+                                class="img-fluid rounded"
+                                style="width: 100%; height: 350px; object-fit: cover;">
                         {% endif %}
                         <div class="experience-badge">
                             <span class="years">{{ receta.tiempo_preparacion }}</span>

@@ -1,0 +1,113 @@
+{% extends 'appRecipesStore/base.html' %}
+{% load static %}
+
+{% block title %}Subir Receta - Recipes Store{% endblock %}
+
+{% block content %}
+
+<main class="main">
+
+    <!-- Título página -->
+    <div class="page-title light-background" data-aos="fade-down">
+        <div class="container text-center">
+            <h1 class="mb-2">Subir una Nueva Receta</h1>
+            <p class="text-muted">Comparte tu receta con toda la comunidad.</p>
+        </div>
+    </div>
+
+    <!-- Sección formulario -->
+    <section class="section">
+        <div class="container d-flex justify-content-center">
+
+            <!-- Tarjeta principal -->
+            <div class="card shadow-lg p-5" 
+                 style="max-width: 750px; width: 100%; border-radius: 18px;"
+                 data-aos="fade-up" data-aos-delay="150">
+
+                <div class="text-center mb-4">
+                    <h3 class="fw-bold" style="font-size: 1.8rem;">Formulario de Receta</h3>
+                    <p class="text-muted">Introduce los datos y añade tu propia creación culinaria.</p>
+                </div>
+
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    {% for field in form %}
+                        <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+                            <label class="form-label fw-semibold" style="font-size: 1.1rem;">
+                                {{ field.label }}
+                            </label>
+
+                            <div class="input-group">
+                                {{ field }}
+                            </div>
+
+                            {% if field.name == "imagen" %}
+                            <!-- PREVISUALIZACIÓN SOLO PARA EL CAMPO IMAGEN -->
+                            <div class="text-center mt-3">
+                                <img id="preview-img"
+                                    src=""
+                                    alt="Previsualización"
+                                    style="max-width: 300px; display: none; border-radius: 10px; margin-top: 10px;">
+                            </div>
+                            {% endif %}
+
+                            <div class="text-danger small">{{ field.errors }}</div>
+                        </div>
+                    {% endfor %}
+
+                    <!-- Botón -->
+                    <div class="text-center mt-4">
+                        <button type="submit"
+                                class="btn btn-primary px-5 py-2"
+                                style="font-size: 1.15rem; border-radius: 30px;">
+                            Guardar Receta
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Select2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+<!-- jQuery y Select2 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#id_ingredientes").select2({
+            placeholder: "Selecciona ingredientes...",
+            width: "100%",
+            theme: "classic"
+        });
+    });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const imgInput = document.getElementById("id_imagen");
+    const preview = document.getElementById("preview-img");
+
+    if (imgInput) {
+        imgInput.addEventListener("change", function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                preview.src = URL.createObjectURL(file);
+                preview.style.display = "block";
+            } else {
+                preview.src = "";
+                preview.style.display = "none";
+            }
+        });
+    }
+});
+</script>
+
+
+{% endblock %}
