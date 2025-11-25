@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Receta, TipoPlato, Ingrediente
 from .forms import RecetaForm
+from django.http import HttpResponse
+from django.template.loader import render_to_string
 
 # Create your views here.
 def home(request):
@@ -47,3 +49,12 @@ def crear_receta(request):
         form = RecetaForm()
 
     return render(request, 'appRecipesStore/crear_receta.html', {'form': form})
+
+def buscar_recetas(request):
+    query = request.GET.get('q', '')
+    recetas = Receta.objects.filter(
+        nombre__icontains=query
+    )
+    return render(request, 'appRecipesStore/partials/recetas_list.html', {
+        'recetas': recetas
+    })

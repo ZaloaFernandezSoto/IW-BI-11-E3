@@ -5,6 +5,7 @@
 
 {% block content %}
 <main class="main">
+
     <!-- Page Title -->
     <div class="page-title light-background">
         <div class="container">
@@ -24,65 +25,54 @@
             <h2>Nuestra Colección de Recetas</h2>
             <p>Explora todas nuestras deliciosas recetas organizadas para ti</p>
         </div>
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row gy-4">
-                {% for receta in recetas %}
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <a href="{% url 'detalle_receta' receta.pk %}" style="display: block;">
-                                {% if receta.imagen %}
-                                    {% if receta.imagen.name|slice:":8" == "recetas/" %}
-                                        <!-- Imagen nueva (MEDIA) -->
-                                        <img src="{{ receta.imagen.url }}"
-                                            class="img-fluid"
-                                            alt="{{ receta.nombre }}"
-                                            style="width: 100%; height: 300px; object-fit: cover;">
-                                    {% else %}
-                                        <!-- Imagen antigua (STATIC) -->
-                                        <img src="{% static 'appRecipesStore/img/' %}{{ receta.imagen }}"
-                                            class="img-fluid"
-                                            alt="{{ receta.nombre }}"
-                                            style="width: 100%; height: 300px; object-fit: cover;">
-                                    {% endif %}
-                                {% else %}
-                                    <!-- Imagen por defecto -->
-                                    <img src="{% static 'appRecipesStore/img/recepie/recepie_1.png' %}"
-                                        class="img-fluid"
-                                        alt="{{ receta.nombre }}"
-                                        style="width: 100%; height: 300px; object-fit: cover;">
-                                {% endif %}
-                                <div class="special-badge">{{ receta.tipo_plato.nombre }}</div>
-                            </a>
-                        </div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h4><a href="{% url 'detalle_receta' receta.pk %}">{{ receta.nombre }}</a></h4>
-                                <div class="dietary-tags">
-                                    <span class="tag"><i class="bi bi-clock"></i></span>
-                                </div>
-                            </div>
-                            <p>{{ receta.instrucciones|truncatewords:20 }}</p>
-                            <div class="menu-item-footer">
-                                <span class="price">{{ receta.tiempo_preparacion }} min</span>
-                                <span class="ingredients-info">
-                                    <i class="bi bi-egg-fried"></i> {{ receta.ingredientes.count }} ingredientes
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% empty %}
-                <div class="col-12">
-                    <div class="alert alert-info text-center">
-                        <h4>No hay recetas disponibles</h4>
-                        <p>Pronto agregaremos nuevas recetas. ¡Vuelve pronto!</p>
-                    </div>
-                </div>
-                {% endfor %}
+        <!-- Buscador -->
+        <div class="container text-center mb-5">
+            <div style="
+                max-width: 450px;
+                margin: auto;
+                position: relative;
+            ">
+                <i class="bi bi-search" style="
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    transform: translateY(-50%);
+                    font-size: 1.2rem;
+                    color: #ff6a00;
+                "></i>
+                <input id="buscador" type="text" 
+                    class="form-control"
+                    placeholder="Buscar una receta..."
+                    style="
+                        padding: 12px 20px 12px 45px;
+                        border-radius: 50px;
+                        border: 2px solid #ff6a00;
+                        box-shadow: 0 4px 12px rgba(255,106,0,0.15);
+                        transition: 0.3s ease;
+                    "
+                    onfocus="this.style.boxShadow='0 4px 14px rgba(255,106,0,0.3)'"
+                    onblur="this.style.boxShadow='0 4px 12px rgba(255,106,0,0.15)'"
+                >
             </div>
         </div>
-    </section><!-- /Menu Section -->
+        <!-- Lista que se actualizará con AJAX -->
+        <div id="lista_recetas">
+            {% include 'appRecipesStore/partials/recetas_list.html' %}
+        </div>
+    </section>
+
+    <!-- AJAX -->
+    <script>
+        document.getElementById('buscador').addEventListener('keyup', function () {
+            let query = this.value;
+
+            fetch(`/buscar_recetas/?q=${query}`)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('lista_recetas').innerHTML = html;
+                });
+        });
+    </script>
+
 </main>
 {% endblock %}
