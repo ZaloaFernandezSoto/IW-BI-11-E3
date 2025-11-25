@@ -59,20 +59,28 @@
                     <!-- Botón -->
                     <div class="text-center mt-4">
                         <button type="submit"
-                                class="btn btn-primary px-5 py-2"
-                                style="
-                                    font-size: 1.15rem;
-                                    border-radius: 50px;
-                                    background-color: #ff6a00;
-                                    border: none;
-                                    padding: 12px 40px;
-                                    color: white;
-                                ">
-                            Guardar Receta
+                            class="btn"
+                            style="
+                                display: inline-flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 8px;
+                                padding: 14px 32px;
+                                background-color: #ff5a1f;
+                                color: white;
+                                border-radius: 50px;
+                                font-weight: 600;
+                                font-size: 1.1rem;
+                                border: none;
+                                box-shadow: 0 4px 12px rgba(255, 90, 31, 0.4);
+                                transition: all 0.3s ease;
+                            "
+                            onmouseover="this.style.backgroundColor='#e14f1b'; this.style.boxShadow='0 6px 16px rgba(255,90,31,0.5)';"
+                            onmouseout="this.style.backgroundColor='#ff5a1f'; this.style.boxShadow='0 4px 12px rgba(255,90,31,0.4)';"
+                        > Guardar Receta
                         </button>
                     </div>
                 </form>
-
             </div>
         </div>
     </section>
