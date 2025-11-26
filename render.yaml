@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: recipesstore
+    env: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn RecipesStore.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: RecipesStore.settings
