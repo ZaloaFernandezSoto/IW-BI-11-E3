@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# Comando para generar el fixture de recetas:
+# python -X utf8 manage.py dumpdata appRecipesStore --indent 2 --output appRecipesStore/fixtures/recetas.json
 """Django's command-line utility for administrative tasks."""
 import os
 import sys

@@ -1,0 +1,1149 @@
+[
+{
+  "model": "appRecipesStore.tipoplato",
+  "pk": 1,
+  "fields": {
+    "nombre": "Entrante",
+    "descripcion": "Plato ligero que se sirve antes del principal. Su objetivo es preparar el apetito sin saciar demasiado. Puede ser frío o caliente: ensaladas, cremas, sopas o pequeñas porciones de pasta o verduras. A menudo destaca por su presentación cuidada y sabores equilibrados. Marca el tono del menú y anticipa la línea del plato principal.",
+    "imagen": "entrante.png"
+  }
+},
+{
+  "model": "appRecipesStore.tipoplato",
+  "pk": 2,
+  "fields": {
+    "nombre": "Plato principal",
+    "descripcion": "Es el centro del menú y el que suele aportar la mayor cantidad de nutrientes. Puede estar basado en carnes, pescados, aves, pastas o platos vegetales más contundentes. Se caracteriza por su mayor tamaño y complejidad en la preparación. Suele combinar proteínas con guarniciones o salsas, y busca un equilibrio entre sabor y saciedad.",
+    "imagen": "platoPrincipal.png"
+  }
+},
+{
+  "model": "appRecipesStore.tipoplato",
+  "pk": 3,
+  "fields": {
+    "nombre": "Postre",
+    "descripcion": "Plato dulce que se sirve al final de la comida. Su función es cerrar el menú con una sensación agradable y ligera. Incluye desde frutas frescas hasta elaboraciones más complejas como tartas, cremas o flanes. Equilibra el conjunto del menú con texturas suaves y sabores dulces o afrutados. En ocasiones, se acompaña de café o licor.",
+    "imagen": "postres.png"
+  }
+},
+{
+  "model": "appRecipesStore.tipoplato",
+  "pk": 4,
+  "fields": {
+    "nombre": "Aperitivo",
+    "descripcion": "Pequeña porción de comida que se sirve antes del almuerzo o la cena, a menudo acompañada de una bebida. Su función es abrir el apetito y preparar el paladar para los platos principales. Suele ser informal y variado: pinchos, canapés, embutidos, frutos secos o pequeños bocados calientes. También puede convertirse en un estilo de comida en sí mismo, como las tapas.",
+    "imagen": "aperitivo.png"
+  }
+},
+{
+  "model": "appRecipesStore.tipoplato",
+  "pk": 5,
+  "fields": {
+    "nombre": "Desayuno",
+    "descripcion": "Primera comida del día, pensada para aportar energía y nutrientes tras el descanso nocturno. Suele incluir alimentos ricos en hidratos y proteínas como pan, cereales, frutas, huevos o lácteos. En muchos países se combina lo dulce (tostadas, bollería, zumos) con lo salado (jamón, queso, aguacate). Es clave para activar el metabolismo y marcar un inicio equilibrado del día.",
+    "imagen": "desayuno.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 1,
+  "fields": {
+    "nombre": "Pollo",
+    "descripcion": "Carne blanca suave y versátil. Se adapta a cualquier cocción: asado, guisado o a la plancha. Es ligera, nutritiva y combina con infinidad de salsas y especias. Ideal como base de caldos o platos principales.",
+    "imagen": "pollo.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 2,
+  "fields": {
+    "nombre": "Ternera",
+    "descripcion": "Carne roja tierna y sabrosa. Se puede asar, guisar o saltear. Rica en proteínas y hierro, combina bien con salsas de vino, nata o mostaza. Sus cortes varían en textura y uso.",
+    "imagen": "ternera.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 3,
+  "fields": {
+    "nombre": "Calabaza",
+    "descripcion": "Hortaliza dulce y suave, rica en betacarotenos. Se usa en cremas, guisos, postres o asada. Su textura cremosa la hace ideal para sopas o rellenos. Aporta color y dulzor natural.",
+    "imagen": "calabaza.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 4,
+  "fields": {
+    "nombre": "Arroz",
+    "descripcion": "Cereal básico y versátil. Se usa en platos salados (paellas, risottos) y dulces (arroz con leche). Absorbe muy bien sabores y caldos. Es económico, saciante y adaptable.",
+    "imagen": "arroz.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 5,
+  "fields": {
+    "nombre": "Cebolla",
+    "descripcion": "Hortaliza base de muchas cocinas, dulce y aromática. Se usa para sofritos, guisos o cruda en ensaladas. Al caramelizarse, desarrolla un sabor profundo y suave. Aporta jugosidad y aroma.",
+    "imagen": "cebolla.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 6,
+  "fields": {
+    "nombre": "Ajo",
+    "descripcion": "Bulbo aromático con sabor fuerte y picante. Base de innumerables sofritos y salsas. Aporta profundidad y aroma a carnes, verduras y pastas. Su sabor se suaviza al cocinarse",
+    "imagen": "ajo.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 7,
+  "fields": {
+    "nombre": "Aceite de oliva",
+    "descripcion": "Grasa vegetal aromática obtenida de aceitunas. Es la base de la dieta mediterránea. Aporta sabor, aroma y textura a platos crudos o cocinados. Ideal para aliños, sofritos y frituras suaves.",
+    "imagen": "aceiteOliva.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 8,
+  "fields": {
+    "nombre": "Sal",
+    "descripcion": "Condimento básico que realza el sabor natural de los alimentos. Imprescindible para la conservación y el equilibrio del gusto. Usada con moderación, mejora cualquier plato.",
+    "imagen": "sal.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 9,
+  "fields": {
+    "nombre": "Pimienta",
+    "descripcion": "Especia molida de sabor picante y aroma intenso. Potencia y equilibra otros sabores. Se usa en casi todas las cocinas del mundo. Existen variedades (negra, blanca, verde) con matices distintos.",
+    "imagen": "pimienta.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 10,
+  "fields": {
+    "nombre": "Huevo",
+    "descripcion": "Ingrediente esencial por su poder emulsionante y espesante. Da estructura a masas y color a rebozados. Se usa en dulces, salados o como base de salsas. Es versátil y muy nutritivo.",
+    "imagen": "huevos.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 11,
+  "fields": {
+    "nombre": "Leche",
+    "descripcion": "Líquido nutritivo rico en proteínas y calcio. Se usa en postres, salsas, batidos o panes. Aporta suavidad y cremosidad. También sirve como base para derivados como nata o queso.",
+    "imagen": "leche.webp"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 12,
+  "fields": {
+    "nombre": "Azúcar",
+    "descripcion": "Endulzante natural que aporta sabor, textura y color a los postres. En repostería ayuda a dorar y conservar. También equilibra acidez en platos salados. Su uso moderado potencia sabores.",
+    "imagen": "azucar.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 13,
+  "fields": {
+    "nombre": "Harina",
+    "descripcion": "Polvo obtenido de moler cereales (principalmente trigo). Es la base de panes, masas, salsas y rebozados. Su tipo (fuerza o floja) determina el uso. Aporta estructura y consistencia.",
+    "imagen": "harina.jpg"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 14,
+  "fields": {
+    "nombre": "Mantequilla",
+    "descripcion": "Grasa láctea sólida, con sabor suave y cremoso. Se usa para cocinar, hornear o untar. Aporta textura y aroma a masas y salsas. Es clave para repostería y para dorar alimentos.",
+    "imagen": "mantequilla.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 15,
+  "fields": {
+    "nombre": "Chocolate",
+    "descripcion": "Producto derivado del cacao, disponible en varias intensidades (negro, con leche, blanco). Usado en postres, coberturas y bebidas. Aporta sabor profundo y textura fundente. Combina con frutas, especias y frutos secos.",
+    "imagen": "chocolate.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 16,
+  "fields": {
+    "nombre": "Limón",
+    "descripcion": "Fruta cítrica de sabor ácido y refrescante. Se usa en zumo, ralladura o rodajas. Aporta acidez, realza sabores y equilibra grasas. Es esencial en marinados, postres y bebidas.",
+    "imagen": "limon.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 17,
+  "fields": {
+    "nombre": "Perejil",
+    "descripcion": "Hierba fresca de sabor limpio y ligeramente picante. Se usa para dar color y aroma final a platos. Realza sabores sin dominarlos. También refresca el paladar y equilibra guisos.",
+    "imagen": "perejil.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 18,
+  "fields": {
+    "nombre": "Queso cheddar",
+    "descripcion": "Queso inglés curado, de sabor intenso y textura firme. Al fundirse, es ideal para gratinar o preparar salsas cremosas. Aporta color y sabor pronunciado. Muy usado en hamburguesas y pastas.",
+    "imagen": "cheddar.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 19,
+  "fields": {
+    "nombre": "Tomate",
+    "descripcion": "Fruto jugoso y ácido, pilar de la cocina mediterránea. Se usa crudo, cocido o asado en miles de recetas. Aporta color, frescura y umami natural. Combina especialmente bien con aceite de oliva y albahaca.",
+    "imagen": "tomate.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 20,
+  "fields": {
+    "nombre": "Pan",
+    "descripcion": "Alimento básico hecho de harina, agua, levadura y sal. Su textura y sabor varían según el tipo y fermentación. Es acompañamiento universal y base de tostadas, tapas o bocadillos.",
+    "imagen": "pan.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 21,
+  "fields": {
+    "nombre": "Lechuga",
+    "descripcion": "Verdura de hoja fresca y crujiente, base de ensaladas. Aporta frescura, agua y ligereza a los platos. Ideal para acompañar comidas más grasas o saladas. Se usa también como envoltorio natural.",
+    "imagen": "lechuga.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 22,
+  "fields": {
+    "nombre": "Pimiento rojo",
+    "descripcion": "Verdura dulce y aromática, rica en vitamina C. Aporta color y sabor a sofritos, asados o rellenos. Dulce al asarse, suave al guisarse. Fundamental en la cocina mediterránea.",
+    "imagen": "pimientoRojo.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 23,
+  "fields": {
+    "nombre": "Caldo de verduras",
+    "descripcion": "Base ligera hecha con verduras cocidas. Ideal para sopas, arroces o salsas. Añade sabor vegetal y frescura sin grasas animales. Puede personalizarse según las verduras usadas.",
+    "imagen": "caldoVerduras.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 24,
+  "fields": {
+    "nombre": "Zanahoria",
+    "descripcion": "Raíz dulce y colorida, rica en betacarotenos. Se usa tanto cruda en ensaladas como cocida en guisos o postres. Aporta dulzor, color y textura. Mejora el sabor de caldos y salsas.",
+    "imagen": "zanahoria.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 25,
+  "fields": {
+    "nombre": "Puerro",
+    "descripcion": "Hortaliza de sabor suave, similar a la cebolla pero más delicado. Ideal para cremas, sopas o quiches. Aporta dulzor natural y suavidad. Es base aromática de muchas preparaciones.",
+    "imagen": "puerro.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 26,
+  "fields": {
+    "nombre": "Patatas",
+    "descripcion": "Tubérculo versátil, base de infinidad de platos. Puede hervirse, asarse o freírse. Su textura cambia según el tipo (más firme o más harinosa). Aporta saciedad y combina con casi todo.",
+    "imagen": "patatas.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 27,
+  "fields": {
+    "nombre": "Nuez moscada",
+    "descripcion": "Semilla aromática rallada con sabor cálido y ligeramente dulce. Se usa en cremas, purés o bechamel. Da profundidad a platos salados y combina también con postres. Es potente: se usa en pequeñas cantidades.",
+    "imagen": "nuezMoscada.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 29,
+  "fields": {
+    "nombre": "Pimentón dulce",
+    "descripcion": "Especia en polvo hecha de pimientos secos molidos. Aporta color rojo, aroma ahumado y sabor dulce. Muy usado en la cocina española para guisos, carnes o sofritos. Se debe cocinar brevemente para liberar su aroma.",
+    "imagen": "pimentonDulce.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 30,
+  "fields": {
+    "nombre": "Caldo de pollo",
+    "descripcion": "Líquido obtenido al cocer huesos y carne de pollo con verduras. Base ligera y sabrosa para sopas o salsas. Aporta suavidad, nutrición y aroma. Puede reemplazar agua en recetas para dar más sabor.",
+    "imagen": "caldoPollo.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 31,
+  "fields": {
+    "nombre": "Mostaza",
+    "descripcion": "Condimento picante hecho con semillas de mostaza molidas. Se usa en salsas, aderezos y marinados. Aporta acidez, picor y profundidad de sabor. Combina bien con carnes y quesos.",
+    "imagen": "mostaza.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 32,
+  "fields": {
+    "nombre": "Pan rallado",
+    "descripcion": "Producto seco obtenido de pan triturado. Se usa para empanar, gratinar o espesar salsas. Aporta textura crujiente y absorbe sabores. Puede aromatizarse con hierbas o queso.",
+    "imagen": "panRallado.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 33,
+  "fields": {
+    "nombre": "Tomillo fresco",
+    "descripcion": "Hierba aromática de sabor intenso y terroso. Se usa en guisos, carnes, salsas y panes. Aporta notas mediterráneas y combina bien con ajo, miel o limón. Resiste bien la cocción prolongada.",
+    "imagen": "tomillo.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 34,
+  "fields": {
+    "nombre": "Queso mozzarella",
+    "descripcion": "Queso italiano fresco y elástico, de sabor suave. Funde fácilmente, por lo que es ideal para pizzas, gratinados o ensaladas caprese. Aporta textura cremosa y aspecto brillante.",
+    "imagen": "mozzarella.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 35,
+  "fields": {
+    "nombre": "Nata para montar",
+    "descripcion": "Parte grasa de la leche, espesa y cremosa. Se usa en salsas, postres o para montar. Aporta suavidad y cuerpo tanto a preparaciones dulces como saladas. También sirve para equilibrar sabores picantes o ácidos.",
+    "imagen": "nata.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 36,
+  "fields": {
+    "nombre": "Cacao en polvo",
+    "descripcion": "Polvo obtenido del grano de cacao, sin azúcar añadido. Se usa en repostería para bizcochos, cremas y bebidas. Aporta sabor intenso y amargor equilibrado. Rico en antioxidantes y energía.",
+    "imagen": "cacaoPolvo.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 37,
+  "fields": {
+    "nombre": "Levadura",
+    "descripcion": "Microorganismo que hace fermentar masas de pan o bollería, generando esponjosidad. Puede ser fresca o seca. En repostería, la química (polvo de hornear) produce el mismo efecto por reacción. Fundamental para panes y bizcochos.º",
+    "imagen": "levadura.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 38,
+  "fields": {
+    "nombre": "Aceite de girasol",
+    "descripcion": "Aceite vegetal de sabor neutro, extraído de las semillas de girasol. Es ideal para freír o preparar masas, ya que no altera el sabor. Rico en vitamina E y ácidos grasos insaturados. Perfecto para repostería o mayonesas.",
+    "imagen": "aceiteGirasol.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 39,
+  "fields": {
+    "nombre": "Manzana",
+    "descripcion": "Fruta jugosa y versátil, disponible en variedades dulces o ácidas. Ideal para postres, ensaladas o acompañar carnes. Aporta frescura, fibra y equilibrio de sabores. Su dulzor natural permite reducir azúcares añadidos.",
+    "imagen": "manzana.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 40,
+  "fields": {
+    "nombre": "Queso  Crema",
+    "descripcion": "Queso fresco suave, untuoso y ligeramente ácido. Perfecto para untar, hacer salsas o postres como cheesecakes. Aporta cuerpo y cremosidad sin ser pesado. Se mezcla fácilmente con dulce o salado.",
+    "imagen": "quesoCrema.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 41,
+  "fields": {
+    "nombre": "Canela",
+    "descripcion": "Especia dulce y aromática, proveniente de la corteza del canelo. Se usa en postres, bebidas y también en guisos para dar un toque cálido. Combina bien con chocolate, manzana o miel. Su aroma reconfortante es clásico en repostería y cocina oriental.",
+    "imagen": "canela.png"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 43,
+  "fields": {
+    "nombre": "Jengibre",
+    "descripcion": "Raíz aromática con sabor picante y cítrico. Se usa tanto fresca como en polvo en platos dulces, salados o infusiones. Aporta frescura y calidez a salsas, currys y postres. Además, tiene propiedades digestivas y estimulantes.",
+    "imagen": "jengibre.webp"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 44,
+  "fields": {
+    "nombre": "Esencia de vainilla",
+    "descripcion": "Extracto aromático obtenido de la vaina de vainilla. Se usa para perfumar postres, cremas, bizcochos o bebidas. Su aroma cálido y dulce realza sabores de chocolate, frutas o nata. Es un básico de la repostería por su versatilidad.",
+    "imagen": "esenciaVainilla.webp"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 45,
+  "fields": {
+    "nombre": "Jamón serrano",
+    "descripcion": "Jamón curado español con sabor salado e intenso. Se usa en lonchas finas, crujiente o en taquitos para dar sabor a pastas, verduras o masas. Aporta umami y textura. Es perfecto para contrastar con ingredientes dulces como miel o frutas",
+    "imagen": "jamonSerrano.jpg"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 46,
+  "fields": {
+    "nombre": "Caldo de carne",
+    "descripcion": "Líquido aromático obtenido al cocer huesos y carne con verduras. Es la base de sopas, guisos y salsas, aportando profundidad y umami. Ideal para enriquecer risottos o estofados. Puede concentrarse y reducirse para potenciar sabor.",
+    "imagen": "caldoCarne.jpg"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 47,
+  "fields": {
+    "nombre": "Tomate cherry",
+    "descripcion": "Pequeños tomates redondos, dulces y jugosos. Su tamaño los hace perfectos para ensaladas, brochetas o como guarnición asada. Aportan color, frescura y un toque ácido que equilibra platos con queso o carnes. Muy usados para dar viveza visual y sabor natural.",
+    "imagen": "tomateCherry.jpg"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 48,
+  "fields": {
+    "nombre": "Salsa de tomate",
+    "descripcion": "Preparado a base de tomates cocidos con cebolla, ajo y hierbas. Es la base de muchísimos platos mediterráneos, desde pastas hasta guisos. Aporta acidez, color y profundidad de sabor. También equilibra grasas en platos con queso o carne.",
+    "imagen": "salsaTomate.webp"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 49,
+  "fields": {
+    "nombre": "Hojaldre",
+    "descripcion": "Masa ligera y laminada elaborada con harina, mantequilla y agua. Al hornearse, se infla y queda crujiente y dorada. Se utiliza tanto en recetas saladas (empanadas, tartas, quiches) como dulces (napolitanas, palmeras). Es versátil y siempre aporta textura y elegancia.",
+    "imagen": "hojaldre.jpg"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 50,
+  "fields": {
+    "nombre": "Miel",
+    "descripcion": "Endulzante natural producido por las abejas a partir del néctar de flores. Aporta dulzor, brillo y un toque floral a postres, salsas o marinados. Es perfecta para equilibrar sabores salados (como el jamón o los quesos). Además, actúa como conservante y tiene propiedades antibacterianas.",
+    "imagen": "miel.jpeg"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 51,
+  "fields": {
+    "nombre": "Camembert",
+    "descripcion": "Queso francés de pasta blanda y corteza comestible blanca. Tiene sabor suave pero con un toque terroso y cremoso al fundirse. Es ideal para hornear entero, usar en tostas o combinar con miel y frutos secos. Aporta cremosidad y elegancia a platos sencillos.",
+    "imagen": "camembert.webp"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 52,
+  "fields": {
+    "nombre": "Albahaca",
+    "descripcion": "Hierba aromática de hojas verdes brillantes y aroma dulce con notas de clavo y menta. Muy usada en la cocina mediterránea, especialmente en salsas como el pesto o sobre pizzas y pastas. Aporta frescura y realza sabores ácidos, como el tomate. Conviene añadirla al final de la cocción para conservar su perfume.",
+    "imagen": "albahaca.jpg"
+  }
+},
+{
+  "model": "appRecipesStore.ingrediente",
+  "pk": 53,
+  "fields": {
+    "nombre": "Galletas saladas",
+    "descripcion": "Pequeños crackers crujientes con sabor neutro o ligeramente salado. Son ideales para servir con quesos, patés o dips, y también como base de aperitivos. Su textura aporta contraste a preparaciones suaves como cremas o mousses. Se usan incluso en recetas dulces para dar un toque crujiente.",
+    "imagen": "galletasSaladas.jpg"
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 1,
+  "fields": {
+    "nombre": "Ensalada César",
+    "tipo_plato": 1,
+    "tiempo_preparacion": 15,
+    "instrucciones": "1. Tostar el pan en cubos con aceite. \r\n2. Cocinar el pollo con ajo, sal y pimienta. \r\n3. Mezclar con queso rallado y aliñar con aceite de oliva.",
+    "imagen": "ensalada_cesar.webp",
+    "ingredientes": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      18,
+      20,
+      21
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 2,
+  "fields": {
+    "nombre": "Arroz con Ternera",
+    "tipo_plato": 2,
+    "tiempo_preparacion": 45,
+    "instrucciones": "Sofreír cebolla y ajo. Añadir ternera troceada y dorar. Incorporar tomate rallado y arroz. Cubrir con agua y cocinar 30 min.",
+    "imagen": "arrozTernera.png",
+    "ingredientes": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      19
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 3,
+  "fields": {
+    "nombre": "Arroz a la jardinera",
+    "tipo_plato": 2,
+    "tiempo_preparacion": 45,
+    "instrucciones": "Para empezar, picamos todos los vegetales y preparamos en una cazuela grande y plana, con un poco de aceite de oliva. Una vez caliente, añadimos las verduras que sofreímos a fuego medio durante 10 minutos. Más tarde, agregamos el arroz y removemos hasta que quede completamente integrado con la mezcla de verduras. Cocinamos durante un minuto y añadimos el caldo de verduras que previamente habremos calentado. Ponemos a fuego lento, tapamos la olla y dejamos cocinar durante 18-20 minutos. Una vez listo, retiramos la olla del fuego y dejamos reposar unos minutos. Para darle un toque visual, decoramos con un poco de perejil fresco picado sobre el arroz, antes de servir. ¡Y listo para disfrutar!",
+    "imagen": "arrozJardinera.png",
+    "ingredientes": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      17,
+      19,
+      22,
+      23,
+      24
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 4,
+  "fields": {
+    "nombre": "Crema de calabaza casera",
+    "tipo_plato": 2,
+    "tiempo_preparacion": 40,
+    "instrucciones": "Pelamos el puerro y troceamos en dos porque sólo vamos a emplear la parte blanca, si es demasiado pequeño o delgado, emplearemos dos. Lo echamos a una cazuela grande, con dos cucharadas de aceite de oliva virgen extra, ya veréis que no hace falta mucho aceite para que se poche.\r\nDel mismo modo pelamos la cebolla y cortamos en dados grandes. La añadimos directamente a la cazuela con el puerro. Removemos y pochamos a fuego lento durante 5 minutos, hasta que se quede más o menos translúcida o transparente.\r\nMientras tanto lavamos y pelamos la calabaza, las zanahorias y las patatas. Cortamos las patatas en trozos pequeños y las añadimos a la misma cazuela con el puerro y la cebolla, espolvoreamos con sal fina.\r\n\r\nLas zanahorias las podemos cortar en trocitos muy pequeños o directamente desmenuzar en la picadora de la batidora. Cuanto más pequeños sean los trozos, más rápido se va a hacer.\r\nCortamos en rodajas la calabaza (ver vídeo) y nos quedamos con dos de ellas en reserva para luego preparar una pequeña guarnición que acompaña la crema. El resto de las rodajas las picamos muy bien o pasamos por la picadora de la batidora de la misma manera que las zanahorias.\r\nEchamos todo a la cazuela y removemos bien, rehogando durante 15 minutos a fuego medio. Añadimos un litro de agua (si queréis darle más sabor podéis emplear un caldito de verduras o ave) y dejamos cocer hasta que esté todo blando, unos veinte minutos a fuego medio-alto es suficiente.\r\nProbamos de sal y si hace falta añadimos. Trituramos con la batidora hasta conseguir una textura cremosa. Debe quedar una crema ligeramente espesa. Ya tenemos lista la crema para servir bien caliente.\r\n\r\nMientras reposa preparamos la guarnición. Sólo tenemos que cortar la calabaza que tenemos reservada en Brunoise (una forma de cortar las verduras en pequeños dados de 1 a 2 mm de lado) sobre una tabla de cortar. Echamos todos los dados en un bol y añadimos un poquito de sal final. Ponemos una sartén a fuego medio con un buen chorrito de aceite de oliva virgen extra.\r\nEchamos los pedazos de calabaza, vamos a pasarla durante 10 minutos hasta que obtengan un color dorado, naranja oscuro. Elegimos un bonito plato hondo, añadimos una cucharada generosa de crema bien caliente. Colocamos en el medio parte de los trocitos de calabaza pochadita y espolvo\r\n\r\nPodéis darle un toque exótico con un poquito de curry y nuez moscada en polvo. En casa nos gusta mucho ese punto asiático que combina genial con el dulzor de la calabaza. Pero es totalmente opcional, si os gusta, tenéis las medidas en los ingredientes. Los añadimos en el punto 4 de la receta, justo después de probar el punto de sal. Echaríamos una cucharadita de curry amarillo en polvo y media de nuez moscada antes de batir la crema. ¿Os animáis a",
+    "imagen": "cremaCalabaza.png",
+    "ingredientes": [
+      3,
+      5,
+      7,
+      8,
+      23,
+      24,
+      25,
+      26,
+      27
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 5,
+  "fields": {
+    "nombre": "Arroz con leche",
+    "tipo_plato": 3,
+    "tiempo_preparacion": 210,
+    "instrucciones": "Lavamos el arroz. Aunque hay gente que no lo hace, yo prefiero lavar el arroz bajo el grifo con un colador hasta que el agua salga clara. Esto ayuda a que no suelte tanto almidón y quede más cremoso sin pasarse de espeso.\r\n\r\nAñadimos los ingredientes a la olla lenta. En la cubeta de la Crock Pot echamos el arroz lavado, la leche entera, la ramita de canela y la piel del limón. Aquí viene lo bueno: lo removemos un poco para repartir el arroz y cerramos la tapa. No hace falta hacer nada más. Ni hervir previamente, ni calentar, ni nada.\r\n\r\nCocinamos a temperatura baja. Ponemos la olla en modo “bajo” (low) y dejamos que se cocine durante 2 horas y media. No hace falta que abras ni remuevas durante este tiempo, que esto no es MasterChef. Eso sí, si tu Crock Pot calienta mucho, puedes revisar a la hora y media por si va demasiado rápido.\r\n\r\nCuando hayan pasado las 2 horas y media, abrimos la olla, sacamos la ramita de canela y la piel del limón. Entonces incorporamos el azúcar y para darle un toque extra de cremosidad, la de mantequilla. Mezclamos todo bien con una cuchara de madera y volvemos a cerrar la tapa.\r\n\r\nCocinamos 1 hora más. Con el azúcar dentro, dejamos que se cocine otra hora en temperatura baja. Este es el momento en el que el arroz SOS especial Postres se vuelve más dulce, más denso y con esa textura tan típica de cuchara que tanto nos gusta. Si al abrirlo lo ves algo líquido, no te preocupes: al enfriar, espesará bastante.\r\n\r\nDejamos enfriar y reposar al menos 30 minutos. Luego lo podemos pasar a recipientes individuales o dejarlo en un bol grande. Eso ya depende de lo que te guste: servirlo tipo ración o que cada uno se sirva al gusto.\r\n\r\nDéjalo enfriar a temperatura ambiente y luego guárdalo en la nevera. Si eres impaciente como yo, igual cae una cucharadita mientras aún está templado… ¡no te juzgo!",
+    "imagen": "arrozLeche.png",
+    "ingredientes": [
+      4,
+      11,
+      12,
+      14,
+      16,
+      41
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 6,
+  "fields": {
+    "nombre": "Pechugas de pollo al horno",
+    "tipo_plato": 2,
+    "tiempo_preparacion": 40,
+    "instrucciones": "Lo primero es encender el horno a 200 °C con calor arriba y abajo. Así estará caliente cuando metamos las pechugas y no perderán jugos en el arranque.\r\n\r\nMientras tanto, preparamos el aliño. En un recipiente amplio y hondo introducimos el aceite de oliva, el pimentón, el ajo en polvo, la cebolla en polvo, el orégano, el zumo de limón, sal y pimienta al gusto. Removemos hasta tener una mezcla homogénea.\r\n\r\nIntroducimos las pechugas en el aliño y las embadurnamos bien por todos lados. Que no quede nada sin cubrir para que el sabor se note en cada bocado.\r\n\r\nPreparamos una fuente apta para horno con el caldo y encima una rejilla. Sobre ella colocamos las pechugas bien aliñadas. Es importante que el caldo no toque las pechugas. Esto ayuda a crear vapor en el horno y mantener la carne hidratada durante la cocción.\r\n\r\nIntroducimos la fuente con las pechugas de pollo en el horno, que ya está caliente, y la colocamos a media altura. Programamos 20-25 minutos (el tiempo exacto dependerá del grosor de las pechugas).\r\n\r\nAntes de cortar las pechugas las dejamos reposar unos cinco minutos aproximadamente. Este paso es clave para que no se escapen todos los jugos al primer corte.\r\n\r\nY ahora solo queda servirlas y acompañarlas con la guarnición que más te guste: una ensalada, un arroz blanco, verduras a la plancha…, tú eliges.\r\n\r\nLa combinación de hierbas y especias del aliño es personalizable al 100%. Esta funciona muy bien, pero puedes usar curry, comino, tomillo, albahaca…",
+    "imagen": "pechugasHorno.png",
+    "ingredientes": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      9,
+      16,
+      29,
+      30
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 7,
+  "fields": {
+    "nombre": "Pollo crujiente a la mostaza",
+    "tipo_plato": 2,
+    "tiempo_preparacion": 60,
+    "instrucciones": "Repasamos los contramuslos de pollo por sí tienen restos de plumas en la piel, en cuyo caso las quitamos. Cortamos también -y desechamos- el sobrante de piel que puedan tener (que suele ser bastante) y nos quedamos solo con la que está adherida a la carne.\r\n\r\nCuando los contramuslos estén bien limpios los sazonamos y los reservamos.\r\n\r\nPreparamos la mezcla que va a servir de costra y, para ello, introducimos el panko en un bol y le agregamos la mantequilla, previamente fundida (lo podemos hacer en el microondas a potencia baja o en un cacito al fuego), y una pizca de sal. Removemos bien y reservamos.\r\n\r\nA continuación rallamos los dientes de ajo y sacamos las hojas al tomillo fresco. Los mezclamos con la mostaza, el aceite de oliva virgen extra, la salsa Perrins, la ralladura de limón, la pimienta negra y un poco más de sal.\r\n\r\nUntamos los contramuslos de pollo, por la parte de la piel, con la mezcla anterior y los colocamos en el interior de una fuente apta para horno.\r\n\r\nDespués los cubrimos con la mezcla de pan rallado, repartiéndola bien por toda la superficie. Con generosidad, que no sobre nada. \r\n\r\nLlevamos la fuente al horno, que habremos precalentado a 190-200ºC con calor arriba y abajo, y asamos el pollo durante 40 minutos.\r\n\r\nSi la superficie se dorara en exceso antes de completarse el tiempo de cocción, bastaría con colocar una lámina de papel de aluminio por encima para evitar que se quemara y poder continuar con el asado.\r\n\r\nCuando el pollo esté listo, lo dejamos reposar unos minutos antes de servirlo. Lo podemos acompañar de un arroz en blanco, unas patatas fritas, unas verduras a la plancha,…con cualquiera de estas guarniciones estará de rechupete.",
+    "imagen": "polloMostaza.png",
+    "ingredientes": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      16,
+      31,
+      32,
+      33
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 8,
+  "fields": {
+    "nombre": "Pollo asado",
+    "tipo_plato": 2,
+    "tiempo_preparacion": 90,
+    "instrucciones": "Lo primero que hacemos es limpiar el pollo de posibles restos de grasa y vísceras que pueda tener. Pondremos especial cuidado en retirar las plumitas que le puedan haber quedado. El pollo tiene que entrar bien seco al horno para que en el proceso de horneado no comience cociéndose, lo que queremos es que se haga bien horneado.\r\n\r\nEn un mortero machacamos la pimienta negra y la sal. Con esta mezcla untamos bien el pollo por todas partes, tanto dentro como fuera. Cortamos el limón por la mitad y exprimimos un poco de su jugo por encima y dentro del pollo. Reservamos el resto del limón.\r\n\r\nEn un vaso mezclamos el aceite con el tomillo. Con la ayuda de un pincel de cocina pintamos el pollo con la mezcla por dentro y por fuera. Reservamos el aceite de oliva virgen extra sobrante.\r\n\r\nColocamos el pollo en la bandeja de horneado y metemos las mitades de limones en su interior. Añadimos también los dientes de ajo pelados y aplastados dentro del pollo.\r\n\r\nPelamos las patatas, las cortamos en rodajas y las repartimos por la bandeja. Regamos tanto el pollo como las patatas con el aceite con tomillo sobrante.\r\n\r\nCon el horno previamente caliente a 190º C horneamos durante 1 hora y 15 minutos. Lo mejor es que lo hagáis en la bandeja del medio con temperatura arriba-abajo y aire. Tened cuidado porque cada horno es un mundo y el tuyo puede necesitar variar la temperatura. Lo mejor es tapar el pollo con papel de aluminio a media cocción, es decir, cuando el pollo lleve 30 minutos aproximadamente.\r\n\r\nLos últimos 15 minutos lo quitamos para tostar la piel y que quede súper crujiente. Antes de servir el pollo lo dejamos reposar fuera del horno tapado de nuevo con el papel de aluminio con el que lo hemos tapado en el horno.\r\n\r\nTrinchamos el pollo con un buen cuchillo. Muy sencillo, en seis piezas. Primero, los dos cuartos traseros (muslo y contramuslo) hasta llegar a la unión de esta pieza con la carcasa. Después, las dos alas. Y, finalmente, las pechugas.\r\n\r\nPara esta operación, se busca el esternón y se desliza el cuchillo rebañando toda la carne y despegándola del costillar. Primero una y luego la otra. Y con lo que queda, siempre habrá carne suficiente en la carcasa para unas buenas croquetas de pollo.\r\n\r\nLo servimos acompañado de las patatas asadas y un poco de ensalada. A mí me encanta con tomate crudo, aceite de oliva virgen extra y un toque de sal y orégano.",
+    "imagen": "polloAsado.png",
+    "ingredientes": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      16,
+      26,
+      33
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 9,
+  "fields": {
+    "nombre": "Empanadas colombianas de pollo y queso",
+    "tipo_plato": 4,
+    "tiempo_preparacion": 75,
+    "instrucciones": "En un bol grande, ponemos la harina de maíz precocida, la sal y el comino en polvo. Añadimos el agua tibia poco a poco, mezclando con las manos hasta obtener una masa suave, uniforme y maleable. Amasamos durante unos 5-7 minutos para que coja consistencia y la dejamos reposar cubierta con un paño mientras preparamos el relleno.\r\n\r\nEn una sartén grande, calentamos un chorrito de aceite de girasol a fuego medio. Sofreímos la cebolla y el ajo picados durante unos 3-4 minutos, hasta que estén blanditos y empiecen a dorarse. Añadimos el pimiento rojo y el tomate, y cocinamos otros 5-6 minutos, removiendo bien para que los sabores se integren.\r\n\r\nSumamos el pollo desmenuzado al sofrito junto con el comino, el pimentón, sal y pimienta al gusto. Mezclamos bien y cocinamos unos 3 minutos, lo justo para que el pollo se impregne de todos los sabores. Retiramos del fuego y dejamos enfriar un poco. Cuando esté templado, añadimos el queso rallado y mezclamos para que se integre de forma uniforme.\r\n\r\n\r\nDividimos la masa en porciones pequeñas (del tamaño de una pelota de golf). Colocamos cada porción entre dos trozos de plástico (film transparente funciona muy bien) y las aplastamos con un rodillo o una tabla, formando discos de unos 10-12 cm de diámetro. Colocamos una cucharada generosa del relleno en el centro, doblamos con cuidado formando medias lunas y sellamos bien los bordes con los dedos o con un tenedor.\r\n\r\nCalentamos abundante aceite de girasol en una sartén honda o freidora, a unos 170-180 °C. Freímos las empanadas por tandas, procurando no llenar demasiado la sartén para que no baje la temperatura. Las dejamos unos 4-5 minutos por tanda, dándoles la vuelta hasta que estén doradas y crujientes. Las sacamos y las dejamos escurrir sobre papel absorbente.\r\n\r\nServimos las empanadas calientes, acompañadas de salsa de ají colombiano, guacamole, salsa tártara o simplemente solas, porque con ese relleno no necesitan mucho más.",
+    "imagen": "empanadillas.png",
+    "ingredientes": [
+      1,
+      5,
+      7,
+      8,
+      9,
+      13,
+      19,
+      22,
+      26,
+      29,
+      34
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 10,
+  "fields": {
+    "nombre": "Tarta de calabaza y chocolate",
+    "tipo_plato": 3,
+    "tiempo_preparacion": 50,
+    "instrucciones": "Para preparar la base, batimos la yema con el agua usando una varilla manual. Reservamos. En un bol grande tamizamos la harina y el cacao. Añadimos el azúcar, la sal y la mantequilla. Mezclamos con las manos hasta conseguir una masa arenosa. Añadimos el huevo batido con agua y mezclamos con una cuchara o espátula.\r\n\r\nEnharinamos ligeramente una superficie limpia y lisa. Pasamos la masa a la superficie enharinada. Amasamos 5 minutos, doblando la masa sobre sí misma. Dejamos reposar la masa 10 minutos.\r\n\r\nY amasamos de nuevo otros 5 minutos. La masa debe ser manejable y no pegajosa. Alisamos la masa con un rodillo y le damos forma de cuadrado, de unos 20 cm. Aproximadamente. Lo envolvemos con papel film, enrollamos la masa sobre sí misma y la dejamos 30 minutos en el frigorífico.\r\n\r\nMientras tanto precalentamos el horno y preparamos la calabaza. La partimos por la mitad, quitamos las pepitas con una cuchara (si resulta complicado pueden quitarse después de hornear) y la ponemos sobre la bandeja del horno.\r\n\r\nHorneamos unos 40-45 minutos hasta que esté tierna. Podemos pinchar con un cuchillo para comprobarlo.\r\n\r\nSacamos la masa del frigorífico y la alisamos con el rodillo.\r\n\r\nCon las manos damos forma redonda pensando en el molde que vamos a usar. Lo ideal es usar un molde redondo de unos 24 cm. bajito, tipo quiché. Pasamos la masa un molde ligeramente engrasado con mantequilla. Acabamos de dar forma con las manos para adaptar la masa al molde. Pinchamos la masa con un tenedor para que respire. Opcionalmente la podemos cubrir con legumbres secas para que quede más fina.\r\n\r\nHorneamos 20 minutos a 200º (vigilamos que no se queme). Sacamos la masa del horno y dejamos templar.\r\n\r\nDerretimos el chocolate 70% al baño María o en el microondas usando una potencia media, haciendo tandas de 30 segundos y removiendo cada vez. Cubrimos la superficie de la base horneada con el chocolate fundido y ayudándonos con una cuchara o lengua para que quede uniforme. Dejamos templar a temperatura ambiente y después 10-15 minutos en el frigorífico.\r\n\r\nEl horno debe dejarse encendido. Sacamos la carne de la calabaza y desechamos la piel. Aplastamos con un tenedor para formar un puré y lo pasamos a un colador o escurridor (con agujeros pequeños). Presionamos con el tenedor para que suelte el exceso de agua.\r\n\r\nPonemos los huevos y el azúcar en un bol grande y batimos con unas varillas eléctricas hasta blanquear y duplicar su volumen (6-8 minutos). Quedará una mezcla cremosa. Añadimos el puré de calabaza y la nata. Batimos un poco más para mezclar bien todos los ingredientes. Sacamos la base del frigorífico y vertemos sobre ella la mezcla de calabaza.\r\n\r\nHorneamos 30-35 minutos a 200º vigilando que no se queme la parte de arriba (si vemos que se está quemando, la cubrimos con papel de aluminio). Para comprobar que la tarta ya está hecha, pinchamos con un cuchillo, si sale limpio estará lista, si quedan restos de masa pegados, horneamos unos minutos más.\r\n\r\nSacamos del horno y dejamos templar. Derretimos en el microondas o al baño María el chocolate con la mantequilla. Desmoldamos la tarta y bañamos la superficie con el chocolate usando una cuchara o lengua para repartirlo y que quede bonito. Dejamos que se enfríe por completo",
+    "imagen": "tartaCalabaza.png",
+    "ingredientes": [
+      3,
+      8,
+      10,
+      12,
+      13,
+      14,
+      15,
+      35,
+      36
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 11,
+  "fields": {
+    "nombre": "Buñuelos de calabaza rellenos de chocolate",
+    "tipo_plato": 3,
+    "tiempo_preparacion": 70,
+    "instrucciones": "Cortamos la calabaza en dados. La cocemos unos 20/25 minutos, hasta que esté blanda y tierna. La retiramos y la pasamos a un recipiente. Trituramos con la batidora. Dejamos atemperar.\r\n\r\nSeparamos las yemas de las claras. Reservamos. Metemos un bol en la nevera o en el congelador (si nos cabe), para que luego esté bien frío en el momento de montar las claras.   \r\n\r\nEn un bol, vamos añadiendo ingredientes para la masa de los buñuelos. Comenzamos por añadir la harina, que tamizamos. A continuación el puré de calabaza, el azúcar, la ralladura de limón, las yemas y la levadura. Mezclamos todo bien, hasta obtener una masa suave y suelta. Si resulta con grumos, podéis darle un toque con la batidora, para hacerla más homogénea.\r\n\r\nEn un bol bien frío, añadimos las claras de huevo. Las montamos con unas varillas, preferiblemente usad unas eléctricas, para no llevar tanto trabajo. Les añadimos una pizca de sal, y las dejamos a punto de nieve.\r\n\r\nAñadimos ahora las claras montadas a nuestro bol con la masa de buñuelos. Vamos mezclando con una espátula, con movimientos envolventes, para que no se nos bajen. Queremos aportarle un toque esponjoso.\r\n\r\nEn un cazo o sartén alta, vertemos abundante aceite de girasol. Calentamos (sin que llegue a humear). Con la ayuda de un par de cucharas, vamos cogiendo porciones de masa y las soltamos sobre el aceite.\r\n\r\nLos buñuelos se irán tostando y cogiendo forma redondeada, al tiempo que se hinchan, por el efecto de la temperatura y la levadura. Doramos bien vuelta y vuelta. Retiramos y dejamos escurrir el aceite, sobre papel absorbente.\r\n\r\nImportante freír de 3-4 a la vez, para que no se baje la temperatura del aceite. Repetimos el proceso con el resto de la masa. Dependiendo del tamaño, nos saldrán entre 35 y 40 unidades. Dejamos reposar mientras preparamos el relleno.\r\n\r\nTroceamos el chocolate con un cuchillo, haciendo virutas grandes. En un cazo, calentamos la nata. Bajamos el fuego. Añadimos el chocolate, la mantequilla y comenzamos a mezclar, con movimientos circulares. Poco a poco se irá formando la crema de chocolate, con aspecto brillante.\r\n\r\nDejamos atemperar un poco, para no quemarnos. Rellenamos una manga pastelera, que debe de tener una boquilla estrecha, para rellenar bien los buñuelos.\r\n\r\nHacemos un agujero a los buñuelos, introducimos la boquilla y vamos rellenando los buñuelos. Con una pequeña cantidad bastará para cada uno. Repetimos el proceso con todos. Para darles el toque final, espolvoreamos con azúcar, antes de servir en la mesa.",
+    "imagen": "buñuelosCalabaza.png",
+    "ingredientes": [
+      3,
+      8,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      35,
+      37,
+      38
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 12,
+  "fields": {
+    "nombre": "Galletas de manzana",
+    "tipo_plato": 3,
+    "tiempo_preparacion": 60,
+    "instrucciones": "Introducimos la mantequilla en un recipiente hondo y amplio. Agregamos el azúcar y batimos con unas varillas eléctricas durante 4-5 minutos o hasta que la mezcla se vea cremosa y blanquecina.\r\n\r\nDespués agregamos la sal, la esencia de vainilla y unos de los huevos y batimos de nuevo hasta integrar.\r\n\r\nA continuación añadimos la pizca de impulsor químico y la harina de trigo, a través de un colador o tamiz, y batimos de nuevo -a velocidad baja-. Paramos en cuanto esté todo bien mezclado y tengamos una masa homogénea. La envolvemos en papel film y la dejamos reposar en la nevera un par de horas.\r\n\r\nMientras tanto, preparamos el relleno y, para ello, asamos las manzanas en el microondas.\r\n\r\nLas lavamos y escurrimos, las descorazonamos y las colocamos dentro de un recipiente apto para el microondas.\r\n\r\nMezclamos el azúcar moreno con la canela y el jengibre y repartimos la mezcla en el interior de las manzanas.\r\n\r\nTapamos el recipiente y lo llevamos al micro. Programamos 10 minutos a máxima potencia (100 W).\r\n\r\nCuando se hayan atemperado, retiramos las pieles y machacamos la pulpa de la manzana para hacer el puré que necesitamos. Lo mezclamos con el queso crema y dejamos que se enfríe en la nevera.\r\n\r\nRetiramos la masa de la nevera y la colocamos entre dos láminas de papel vegetal. Le pasamos el rodillo por encima para conseguir una lámina de unos 3 mm de grosor. Cortamos 8 rectángulos de 10×6 cm aproximadamente y los colocamos sobre una bandeja de horno forrada con papel vegetal o con un tapete de silicona.\r\n\r\nCon la masa sobrante hacemos tiras finas.\r\n\r\nRepartimos el relleno, que habrá de estar frío, sobre los rectángulos de masa sin llegar al borde.\r\n\r\nColocamos encima las tiras de masa, entrecruzándolas como si fueran momias, y presionando las juntas en el borde con suavidad.\r\n\r\nBatimos el otro huevo y pincelamos con él la masa de la superficie, procurando que no caiga sobre el puré de manzana.\r\n\r\nLlevamos la bandeja al horno, precalentado a 180ºC con calor arriba y abajo, y cocemos las galletas durante unos 15 minutos o hasta que se vean ligeramente doradas.\r\n\r\nEsperamos a que se enfríen antes de retirarlas de la bandeja y colocar los ojos de azúcar en cada una de ellas.\r\n\r\nSolo queda disfrutar de estas galletas momia con la bebida que más te guste. Están de rechupete.",
+    "imagen": "galletasManzana.png",
+    "ingredientes": [
+      8,
+      10,
+      12,
+      13,
+      14,
+      39,
+      40,
+      41,
+      43,
+      44
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 13,
+  "fields": {
+    "nombre": "Tarta de manzana",
+    "tipo_plato": 3,
+    "tiempo_preparacion": 90,
+    "instrucciones": "Preparamos una masa quebrada mezclando la harina con la mantequilla, cortada en dados, y la sal. Usamos las puntas de los dedos para no calentar la mantequilla y trabajamos los ingredientes hasta obtener una especie de migas.\r\n\r\nMezclamos la yema de huevo batida, el vinagre y el agua helada. Añadimos cuatro cucharadas de esta mezcla a la masa y removemos. Tomamos una pequeña cantidad y la amasamos ligeramente, apretamos con la mano para comprobar si ha quedado compacta y no se desmiga. Si no es el caso añadimos un poco más de la mezcla de huevo, vinagre y agua, removemos y comprobamos hasta obtener el punto adecuado.\r\n\r\nHacemos una bola con la masa y la dividimos en dos. Aplastamos cada mitad con el dorso de la mano y envolvemos, por separado, en papel film. Dejamos reposar la masa en la nevera durante una hora para que tome consistencia.\r\n\r\nPelamos y troceamos las manzanas y las introducimos en una sartén junto con las especias, un pellizco de sal y el azúcar. Removemos bien y ponemos al calentar a fuego suave.\r\n\r\nA continuación agregamos la mantequilla, tapamos y dejamos que la manzana cueza durante unos cinco minutos o hasta que comience a estar tierna.\r\n\r\nAñadimos la harina fina de maíz, removemos y continuamos cociendo cinco minutos más. Retiramos la cacerola del fuego y añadimos el vinagre de manzana. Dejamos enfriar completamente antes de montar la tarta.\r\n\r\nEnharinamos una superficie de trabajo y colocamos una de las mitades de masa encima. Espolvoreamos con un poco más de harina y, con ayuda de un rodillo, la estiramos hasta obtener un círculo un poco más grande que la base del molde que vamos a usar (el mío de 24 cm).\r\n\r\nCubrimos con ella la base y laterales del molde, la rellenamos con la compota de manzana fría y la guardamos en la nevera mientras manipulamos la otra mitad de masa.\r\n\r\nRepetimos la operación, espolvoreando la encimera con harina colocando la masa encima y espolvoreando esta con un poco más de harina.\r\n\r\nLa estiramos hasta obtener un círculo del diámetro del molde (24 cm). Después pasamos la punta de un cuchillo afilado por todo el contorno y retiramos en interior.\r\n\r\nColocamos la masa sobre la tarta, doblamos el sobrante de la masa base sobre la de cobertura y presionamos los bordes para sellar.\r\n\r\nPincelamos con huevo batido y llevamos la tarta al horno (colocándola en la parte inferior), precalentado a 180 ºC con calor arriba y abajo, durante 45-50 minutos o hasta que la masa se vea dorada.",
+    "imagen": "tartaManzana.png",
+    "ingredientes": [
+      8,
+      10,
+      12,
+      13,
+      14,
+      39,
+      41,
+      43
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 14,
+  "fields": {
+    "nombre": "Bizcocho de chocolate",
+    "tipo_plato": 3,
+    "tiempo_preparacion": 90,
+    "instrucciones": "Comenzamos batiendo el azúcar con la mantequilla hasta que consigamos una crema blanquecina que habrá aumentado su volumen. Para este paso es aconsejable utilizar una batidora de varillas o un robot de cocina. Si optamos por hacerlo a mano debemos armarnos de fuerza y paciencia.\r\n\r\nAñadimos los huevos uno a uno, integrando cada una en la mezcla antes de añadir el siguiente. Reservamos.\r\n\r\nEn un bol añadimos los ingredientes secos, la harina, la Maizena, el cacao y la levadura. Con un tenedor mezclamos bien. Introducimos en la mezcla de ingredientes secos a los huevos con mantequilla que tenemos reservados. Lo hacemos tamizándolos y volvemos a batir hasta integrar. No es necesario batir mucho la mezcla, con integrarla de forma homogénea es suficiente.\r\n\r\nAñadimos el chocolate que previamente habremos cortado en daditos pequeños. Mezclamos para que quede repartido por toda la masa. Vertemos la mezcla en un bol previamente engrasado. Asentamos la crema golpeando ligeramente el molde.\r\n\r\nPrecalentamos el horno a 180º C antes de meter el bizcocho de chocolate en el mismo. Con 10 minutos antes es suficiente para que el horno alcance esta temperatura.\r\n\r\nCon el horno previamente caliente, horneamos durante 50 minutos a 180º C. Siempre en la bandeja del medio del horno, mejor en la rejilla del horno. Y con temperatura arriba y abajo, sin aire.\r\n\r\nRecordad que cada horno es un mundo y que los tiempos pueden variar. Si lo necesita, dejad un poco más de tiempo. Comprobamos que esté bien cocido pinchándolo con un palito y comprobando que este salga limpio. Es una forma eficaz de asegurarnos que está perfecto. Retiramos el molde del horno y lo dejamos reposar durante 15 minutos sobre una rejilla antes de desmoldarlo.\r\nDejamos que repose sobre la rejilla hasta que esté totalmente frío. \r\n\r\nDesmoldamos el bizcocho pasando un cuchillo por el borde y despegamos con cuidado de las paredes.\r\n\r\nServimos cuando se haya enfriado, y acompáñalo con unos trocitos de chocolate… sí, más chocolate. Ya verás qué esponjoso y delicioso, totalmente de rechupete.",
+    "imagen": "bizcochoChocolate.png",
+    "ingredientes": [
+      8,
+      10,
+      12,
+      13,
+      14,
+      15,
+      36,
+      37
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 15,
+  "fields": {
+    "nombre": "Croquetas de Jamón",
+    "tipo_plato": 4,
+    "tiempo_preparacion": 60,
+    "instrucciones": "Picamos la cebolla muy pequeña (o pasamos por la picadora). El objetivo es que casi no se note al morder, aunque si os gusta con tropezones de jamón, no piquéis el jamón, cortadlo a mano muy fino. Reservamos.\r\n\r\nPicamos el jamón o si lo preferís podéis comprar jamón serrano en virutas. Reservamos.\r\n\r\nEn una sartén grande, ponemos una cucharada colmada de mantequilla y dos cucharadas colmadas de aceite de oliva virgen extra. Añadimos la cebolla y la ponemos a pochar a fuego muy bajo. A continuación añadimos el jamón picado y rehogamos 1 minuto o dos, hasta que se integren bien los ingredientes.\r\n\r\nContinuamos con el fuego bajo (3 o 4 de mi inducción) y añadimos la harina para tostarla, removiendo sin parar para que no se queme. Inmediatamente después vertemos, poco a poco, la leche sin dejar de remover. Disolvemos la Maizena con el caldo y lo agregamos a la bechamel. Si no quieres añadir caldo de cocido, incrementad la cantidad de leche en la misma proporción.\r\n\r\nSeguimos removiendo y añadimos una pizca de nuez moscada. Yo le añado pizca y media, porque me gusta mucho esta especia y un poco de sal al gusto (cuidado que el jamón ya es muy salado).\r\n\r\nCuando la masa se despegue de los laterales de la sartén, la pasamos a una fuente grande y dejamos que se enfríe. Para que la masa quede bien, hay que tener paciencia y remover mucho tiempo. Hasta que se despegue de los bordes al pasar el cucharón.\r\n\r\nUna vez fría tapamos la fuente con film y la dejamos en la nevera hasta el día siguiente (24 horas aproximadamente). Es importante que no pongáis el film inmediatamente. Para evitar que salgan gotas por el calor y el vapor.\r\n\r\nPasadas las 24 horas, comenzamos a dar forma a las croquetas, este es quizás mi secreto, el reposo, así la masa quedará más consistente al rebozar. Si tenéis mucha prisa o son para el mismo día. Podéis emplear el congelador para que enfríen rápido y sean más sencillas a la hora de manipular.\r\n\r\nBatimos dos huevos en un plato hondo y ponemos abundante pan rallado en un plato liso. Preparamos en boles los ingredientes para el rebozado, los huevos batidos y el pan rallado.\r\n\r\nFormamos la forma deseada para las croquetas, en casa nos ayudamos de una cuchara. Para bolear las croquetas con la mano, lo mejor es untarlas con un poquito de aceite para que no se nos pegue la masa.\r\n\r\nCogemos una porción de masa y le damos la forma deseada. Alargadas o en forma de bolitas y las pasamos, inicialmente por pan rallado. Sumergimos cada bolita de croqueta en el huevo batido y luego, bien escurridas. Las rebozamos con el pan rallado.\r\n\r\nPara conseguir una corteza exterior bien crujiente o aconsejo que repitáis la operación bañando cada croqueta de nuevo en huevo y pasándola por segunda vez por el pan rallado.\r\n\r\nCalentamos en una sartén honda una buena cantidad de aceite suave para freír y, una vez caliente vamos friendo las croquetas. Tenemos que tener la precaución de ir bañando las croquetas con el aceite por su cara superior mientras se van friendo. Así evitaremos que se nos abran y les salga el relleno. Reservamos sobre un papel absorbente, y así quitaremos el sobrante de aceite.",
+    "imagen": "croquetasJamon.png",
+    "ingredientes": [
+      5,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      27,
+      32,
+      45,
+      46
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 16,
+  "fields": {
+    "nombre": "Pan pizza con jamón queso y tomates cherry",
+    "tipo_plato": 4,
+    "tiempo_preparacion": 15,
+    "instrucciones": "Comenzamos precalentando el horno a 180 °C.\r\n\r\nA continuación, cortamos la barra o los panecillos a lo largo por la mitad. Esparcimos la salsa de tomate por la superficie, extendiendo bien.\r\n\r\nCortamos los tomates cherry en rodajas.\r\n\r\nColocamos las lonchas de jamón en el pan y cubrimos con los tomates cortados.\r\n\r\nRepartimos la mozzarella troceada en cada trozo de pan.\r\n\r\nEspolvoreamos el orégano seco por encima.\r\n\r\nYa solo nos quedará hornear nuestros panecillos a 180 °C de 8 a 10 minutos, o hasta que observemos que sea fundido el queso por completo.\r\n\r\nOtra opción es hacer uso de la freidora de aire para hornear nuestros pan pizza de salami. Requerirá el mismo tiempo y temperatura.\r\n\r\nY ya habremos terminado. Servimos nuestros panecillos inmediatamente para evitar que se enfríen.",
+    "imagen": "panPizza.png",
+    "ingredientes": [
+      20,
+      34,
+      45,
+      47,
+      48
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 17,
+  "fields": {
+    "nombre": "Tequeños de queso",
+    "tipo_plato": 4,
+    "tiempo_preparacion": 60,
+    "instrucciones": "Ponemos en un bol grande la harina de trigo excepto unas 2 cucharadas de harina que dejamos para ir engordando la masa. Con una cuchara hacemos un hoyo en el centro del bol, echamos la mantequilla cortada en dados y el huevo.\r\n\r\nAñadimos el agua tibia y sal. Batimos con una cuchara de madera desde el centro hacia afuera y vamos poco a poco mezclando con la harina. Seguimos removiendo con las manos lo que empieza a ser la masa, por ahora será una mezcla pegajosa pero firme.\r\n\r\nPreparamos la zona donde vamos a amasar, la encimera de la cocina es perfecta. Espolvoreamos la zona con harina, sacamos la masa del bol y empezamos a trabajarla. Es muy importante el refinado para que quede más elástica, estiramos la masa como un churro y la retorcemos en espiral varias veces.\r\n\r\nAl final volvemos a juntar y amasar de nuevo durante unos diez minutos. Este es el truco que hace que la masa quede perfecta.\r\n\r\nDespués de esos 10 minutos podremos manipular la masa con más rapidez ya que irá quedando elástica y homogénea. La medida de harina correcta es “hasta que la masa no se pegue a las manos”, pero tampoco se debe abusar. Recordad que la cantidad depende de la harina que vayáis a utilizar, pues no siempre vienen de moliendas iguales, ni el tipo de trigo es el mismo.\r\n\r\nVamos convirtiendo la masa en una bola. Cogemos el anterior bol, lo enharinamos y metemos la bola dentro. Tapamos el bol con un trapo de algodón durante unos 30 minutos.\r\n\r\nCortamos la masa en dos trozos y en la encimera de la cocina la trabajamos con los dedos hasta que nos quede una superficie plana.\r\n\r\nEspolvoreamos un poco de harina y seguimos estirando con la ayuda de un rodillo.\r\n\r\nCuando la masa quede fina, cortamos en tiras uniformes. Con ellas forramos los palitos de queso sin que nos quede ningún hueco para que no escape el relleno cuando los friamos. El queso con el calor del aceite se puede salir y no queremos que ocurra esto.\r\n\r\nVamos enrollando la masa alrededor del queso cómo si fuesen las vendas de una momia.\r\n\r\nLa única dificultad de esta receta está en la temperatura del aceite, ya que si está poco caliente la masa cae al fondo, pero si está demasiado caliente se nos dorarán muy rápido y el queso no quedará cremoso por dentro. La primera tanda nos servirá para probar las siguientes y que nos salgan de rechupete.\r\nEchamos a la sartén nuestros tequeños. Cuando estén dorados los sacamos a un papel absorbente. Así ya estarían perfectos, pero yo los dejaría enfriar un poquillo por si nos quemamos.",
+    "imagen": "tequeños.png",
+    "ingredientes": [
+      7,
+      8,
+      10,
+      13,
+      14,
+      34
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 18,
+  "fields": {
+    "nombre": "Hojaldre de camembert y manzana",
+    "tipo_plato": 1,
+    "tiempo_preparacion": 35,
+    "instrucciones": "Primero hay que pelar las manzanas, cortarlas en láminas y cocinarlas al vapor con unas gotas de agua en el microondas durante 1 minuto y medio. Luego cortamos el queso camembert en dos. \r\n\r\nSobre el queso cortado colocamos las laminas de manzana. Añadimos la miel, pimienta y el tomillo. Cerramos el camembert, lo envolvemos en papel de aluminio y lo dejamos refrigerar durante 15 minutos. \r\n\r\nUna vez frio, colocamos el camembert en el centro del hojaldre desenrollado. En el hojaldre debemos hacer 6 cortes desde el centro hasta el borde dejando un margen de 5 cm más o menos entre el corte y el queso. \r\n\r\nFinalmente forramos con el hojaldre el queso, pintamos con huevo batido y horneamos durante 20 minutos a 190ºC",
+    "imagen": "hojaldreCamembert.png",
+    "ingredientes": [
+      9,
+      10,
+      33,
+      39,
+      49,
+      50,
+      51
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 19,
+  "fields": {
+    "nombre": "Patatas deluxe",
+    "tipo_plato": 1,
+    "tiempo_preparacion": 65,
+    "instrucciones": "Cortar las patatas en gajos y cocinarlas al vapor en el microondas durante 5 ó 7 minutos. \r\n\r\nPoner la harina en una bolsa junto con el resto de especias. Cerrar la bolsa y agitar con energía para mezclar todo. Meter las patatas ya cocidas por tandas y sacudir para que se impregnen del sazonador\r\n\r\nMás tarde, colocarlas en una placa de horno sobre papel sulfurizado (papel de horno). Verter un hilo de aceite de oliva por encima. \r\n\r\nHornear durante 30 min. a 180º. Después dorar en el grill durante 5 min hasta que cojan color. Una vez listas servir y disfrutar",
+    "imagen": "patatasDeluxe.png",
+    "ingredientes": [
+      6,
+      7,
+      8,
+      9,
+      13,
+      26,
+      29
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 20,
+  "fields": {
+    "nombre": "Medallones de verdura",
+    "tipo_plato": 1,
+    "tiempo_preparacion": 65,
+    "instrucciones": "Primero, pela y corta en trozos la patata. Cuece en agua hirviendo durante 15 min. Escurre y machaca hasta hacer puré. Salpimenta y añade nuez moscada + huevo y mezclar\r\n\r\nRalla el calabacín sin pelar, y las zanahorias peladas. Cocinar en una sartén con un poco de aceite de oliva durante 5 min. Añade las verduras a nuestro puré anterior y mezclar. Añadir harina y mezclar de nuevo.\r\n\r\nHaz pegotes de preparación sobre una bandeja de horno con papel sulfurizado. Si tienes discos o cortadores te saldrán medallones perfectos. Hornear 20 min a 220°C. Y listo",
+    "imagen": "medallones.png",
+    "ingredientes": [
+      7,
+      8,
+      9,
+      10,
+      13,
+      24,
+      26,
+      27
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 21,
+  "fields": {
+    "nombre": "Ensalada caprese fresca italiana",
+    "tipo_plato": 1,
+    "tiempo_preparacion": 10,
+    "instrucciones": "Primero debemos de cortar los ingredientes, el tomate y mozzarella en laminas y la albahaca en hojas.  Más tarde, salpimentamos al gusto y añadimos el aceite. Y listo",
+    "imagen": "ensaladaCaprese.png",
+    "ingredientes": [
+      7,
+      8,
+      9,
+      19,
+      34,
+      52
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 22,
+  "fields": {
+    "nombre": "Tostas de calabaza y queso",
+    "tipo_plato": 4,
+    "tiempo_preparacion": 40,
+    "instrucciones": "Pela y corta en cubos la calabaza butternut. Cocina al vapor durante aproximadamente unos unos 20 minutos. Añade un poco de aceite a la sartén y cuando esté caliente sofríe durante unos minutos los cubos de calabaza. Salpimienta al gusto y añade un poco de romero seco.\r\n\r\nCuando la calabaza esté dorada, retira y reserva. Tuesta las rebanadas de pan y unta cada una de ellas con 1,5 cucharadas de queso ricotta. Reparte la calabaza en las tostas.\r\n\r\nSi lo deseas puedes agregar un huevo escalfado o un huevo poché. La combinación de sabores es deliciosa!",
+    "imagen": "tostasCalabaza.png",
+    "ingredientes": [
+      3,
+      7,
+      8,
+      9,
+      20,
+      34
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 23,
+  "fields": {
+    "nombre": "Mini cheesecake salado de queso crema, albahaca y tomates cherry",
+    "tipo_plato": 1,
+    "tiempo_preparacion": 60,
+    "instrucciones": "Primero, para la preparación de la base triturar las galletitas saladas en una batidora o robot de cocina (también puedes machacarlas) hasta hacerlas polvo. Echarlas a un bol, añadir la mantequilla fundida y mezclar hasta amalgamar ambos ingredientes.\r\n\r\nColoca los aros metálicos sobre un plato. Reparte la mezcla de galletas en cuatro partes iguales, una en cada aro. Presiona con una cuchara o un vaso pequeño para que quede una base compacta y lisa. Mete el plato en el congelador durante 10 o 15 minutos para que se endurezca.\r\n\r\nMientras tanto, colocar en el vaso de la batidora las hojas de albahaca, el aceite de oliva y el queso parmesano. Triturar hasta obtener una pasta. Añadir el queso crema y una pizca de sal, y volver a batir hasta integrar completamente.\r\n\r\nSacar las bases del congelador. Repartir la crema por encima, alisar con una cuchara para que quede uniforme y volver a meter en el congelador durante unos 25 minutos.\r\n\r\nPoner un poco de aceite de oliva en una sartén y calentar. Añadir el diente de ajo entero y dorar ligeramente. Incorporar los tomates cherry cortados por la mitad, sazonar con una pizca de sal y un poco de pimienta. Bajar el fuego, tapar la sartén y cocinar durante unos 10 minutos, removiendo de vez en cuando.\r\n\r\nPasar los tomates a un bol y dejar enfriar mientras se termina la preparación del cheesecake. Retirar el diente de ajo. Una vez transcurrido el tiempo de reposo, sacar los cheesecakes del congelador, desmoldar con cuidado y cubrir con los tomates cherry. \r\n\r\nDecorar con unas hojas de albahaca fresca y servir. ¡Y listo! Ya puedes disfrutar de tu cheesecake salado.",
+    "imagen": "miniCheesecakes.png",
+    "ingredientes": [
+      6,
+      7,
+      8,
+      9,
+      14,
+      38,
+      40,
+      47,
+      52,
+      53
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 24,
+  "fields": {
+    "nombre": "Mini tartaletas de camembert y miel",
+    "tipo_plato": 4,
+    "tiempo_preparacion": 30,
+    "instrucciones": "Si usas hojaldre:\r\n\r\nPrecalienta el horno a 190 °C. Corta círculos de masa (unos 6–7 cm de diámetro) y colócalos en moldes de mini tartaletas o sobre una bandeja con papel de horno. Pincha el centro con un tenedor para que no suban demasiado. Pincela con huevo batido los bordes para un acabado dorado. Hornea 10–12 minutos, hasta que estén infladas y doradas. Sácalas y deja enfriar ligeramente.\r\n\r\nPara el relleno, corta el camembert en trocitos pequeños (sin quitar toda la corteza, da sabor). Mezcla en un bol el camembert con una cucharadita de miel y un chorrito de nata si quieres un relleno más cremoso. Rellena las tartaletas con una cucharada de la mezcla. Vuelve a hornear 3–5 minutos, solo para que el queso se funda y burbujee un poco.\r\n\r\nPara darle un toque final al sacar del horno, rocía con un hilo fino de miel por encima. Añade una hojita de tomillo fresco o albahaca para decorar. Sirve templadas, para que el queso esté cremoso y la miel fluya.",
+    "imagen": "tartaletas.png",
+    "ingredientes": [
+      10,
+      33,
+      35,
+      49,
+      50,
+      51,
+      52
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 25,
+  "fields": {
+    "nombre": "Dip caliente de queso cheddar y puerro",
+    "tipo_plato": 4,
+    "tiempo_preparacion": 40,
+    "instrucciones": "Limpia bien el puerro y córtalo en rodajas finas. Corta longitudinalmente y enjuaga bajo el grifo para eliminar tierra Saltea el puerro\r\n\r\nEn una sartén, derrite la mantequilla y añade el puerro. Cocina a fuego medio-bajo 8–10 minutos hasta que esté muy tierno y ligeramente dorado. Añade una pizca de sal y pimienta.\r\n\r\nIncorpora la nata y la mostaza Agrega la nata y la mostaza al puerro, remueve y deja que la mezcla hierva suavemente 2–3 minutos hasta que espese un poco.\r\n\r\nAñade el queso cheddar Baja el fuego y añade el queso rallado poco a poco, removiendo hasta que se funda y quede una crema homogénea. Si está muy espeso, añade un chorrito más de nata. Prueba y ajusta de sal, pimienta o un toque de nuez moscada.\r\n\r\nSirve caliente. Pásalo a un cuenco o fuente pequeña resistente al calor. Puedes gratinar 5 minutos al horno si quieres una capa dorada por encima.\r\n\r\nAcompáñalo con unas galletas saldas o tostas de pan rústico.",
+    "imagen": "dipQueso.png",
+    "ingredientes": [
+      8,
+      9,
+      14,
+      18,
+      20,
+      25,
+      27,
+      31,
+      35,
+      53
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 26,
+  "fields": {
+    "nombre": "Hojaldre relleno de carne y queso crema",
+    "tipo_plato": 2,
+    "tiempo_preparacion": 50,
+    "instrucciones": "Lo primero es precalentar el horno a 200 °C (calor arriba y abajo).\r\n\r\nPara preparar el relleno lava y corta el puerro en rodajas finas. En una sartén, añade un chorrito de aceite de oliva y sofríelo a fuego medio unos 5 minutos, hasta que esté tierno. Agrega la carne de ternera picada y cocina otros 7–8 minutos, removiendo, hasta que esté bien dorada. Salpimenta y añade el tomillo fresco. Retira del fuego y deja templar un poco. Incorpora el queso crema (y la nata si deseas una textura más cremosa). Mezcla bien hasta obtener un relleno jugoso y homogéneo.\r\n\r\nLuego monta el hojaldre. Extiende la lámina de hojaldre sobre papel de horno. Coloca el relleno en el centro (en forma de rectángulo alargado si la masa es rectangular). Dobla los bordes hacia el centro, sellando bien las uniones (puedes mojar ligeramente con agua o huevo batido para que pegue). Pincela toda la superficie con huevo batido. Haz unos cortes decorativos en la parte superior para que respire el vapor.\r\n\r\nHornea durante 25–30 minutos, hasta que el hojaldre esté dorado e inflado. Deja reposar unos 5 minutos antes de cortar, para que el relleno se asiente.\r\n\r\nPara la presentación, Sirve con una ensalada fresca, puré de patatas o verduras salteadas. También puedes acompañar con una salsa ligera de nata y mostaza o una reducción de miel y tomillo.",
+    "imagen": "hojaldreCarne.png",
+    "ingredientes": [
+      2,
+      7,
+      8,
+      9,
+      10,
+      25,
+      33,
+      35,
+      40,
+      49
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 27,
+  "fields": {
+    "nombre": "Tosta de hojaldre con jamón serrano, camembert y miel",
+    "tipo_plato": 1,
+    "tiempo_preparacion": 25,
+    "instrucciones": "Primero precalienta el horno a 200 °C (calor arriba y abajo).\r\n\r\nPrepara las bases. Extiende el hojaldre sobre papel de horno. Corta en 4 rectángulos o cuadrados del tamaño de una tosta (unos 10×8 cm). Pincha ligeramente el centro con un tenedor (para que no suba demasiado). Pincela los bordes con huevo batido para que queden dorados. Hornea las bases solas durante 10–12 minutos, hasta que estén infladas y doradas.\r\n\r\nMonta las tostas. Saca el hojaldre del horno y, con una cuchara, aplasta un poco el centro para hacer hueco. Coloca trozos de camembert en el centro de cada tosta. Encima, añade una loncha de jamón serrano (puede ir doblada o ligeramente crujiente). Rocía con un hilo fino de miel por encima. \r\n\r\nGratina o vuelve a hornear Mete las tostas de nuevo al horno 3–5 minutos, hasta que el queso se funda y el jamón esté brillante. \r\n\r\nSirve inmediatamente. Añade unas hojitas de tomillo fresco o albahaca para decorar. Servir caliente o templado para que el camembert esté cremoso.",
+    "imagen": "hojaldreJamon.png",
+    "ingredientes": [
+      10,
+      33,
+      45,
+      49,
+      50,
+      51
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 28,
+  "fields": {
+    "nombre": "Tostadas con queso crema, miel y nueces",
+    "tipo_plato": 5,
+    "tiempo_preparacion": 5,
+    "instrucciones": "Tuesta el pan hasta que esté crujiente y dorado. Unta el queso crema generosamente sobre cada rebanada. Rocía con miel al gusto. Decora con nueces. Sirve inmediatamente. También queda deliciosa si añades unas rodajas de manzana.",
+    "imagen": "tostadasMiel.png",
+    "ingredientes": [
+      20,
+      27,
+      40,
+      50
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 29,
+  "fields": {
+    "nombre": "Hojaldritos de chcolate y miel",
+    "tipo_plato": 5,
+    "tiempo_preparacion": 25,
+    "instrucciones": "Precalienta el horno a 200 °C. Corta el hojaldre en rectángulos pequeños. Coloca un trocito de chocolate en el centro y enrolla como mini napolitanas. Pincela con huevo y hornea 15–20 min, hasta que estén doradas. Al salir del horno, rocía con un hilo de miel por encima. Si los rellenas con una mezcla de chocolate + queso crema, quedan aún más cremosos.",
+    "imagen": "hojaldreChocolate.png",
+    "ingredientes": [
+      10,
+      15,
+      40,
+      49,
+      50
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 30,
+  "fields": {
+    "nombre": "Mini tartas de hojaldre con chocolate y vainilla",
+    "tipo_plato": 3,
+    "tiempo_preparacion": 25,
+    "instrucciones": "Calienta la nata y añade el chocolate hasta formar una crema suave (ganache).\r\nExtiende el hojaldre y corta en cuadrados. Coloca una cucharadita de ganache en el centro, dobla y sella los bordes. Pincela con huevo y hornea 15–20 min a 200 °C. Sirve templadas con un toque de miel por encima. Deben de quedar crujientes por fuera y fundentes por dentro.",
+    "imagen": "miniTartas.png",
+    "ingredientes": [
+      15,
+      35,
+      44,
+      49
+    ]
+  }
+},
+{
+  "model": "appRecipesStore.receta",
+  "pk": 33,
+  "fields": {
+    "nombre": "Mini Croissants",
+    "tipo_plato": 5,
+    "tiempo_preparacion": 50,
+    "instrucciones": "Darle forma al hojaldre, echarle azúcar y levadura y al horno durante 30 minutos.",
+    "imagen": "recetas/croissants.webp",
+    "ingredientes": [
+      12,
+      37,
+      49
+    ]
+  }
+}
+]
